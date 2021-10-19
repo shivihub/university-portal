@@ -83,18 +83,22 @@
         {
             signupform.style.display = "none";
             loginform.style.display = "block";
-            logbtn.classList.add ("active");
-            signbtn.classList.remove("active");
-            signbtn.classList.add("non-active");
-
+            // signbtn.classList.remove("active");
+            // signbtn.classList.add("non-active");
+            // logbtn.classList.add("active");
+            logbtn.classList.toggle("active");   
+            signbtn.classList.toggle("active");          
         }  
         function showsignup()
         {
             signupform.style.display = "block";
             loginform.style.display = "none";
-            logbtn.classList.remove("active");
-            signbtn.classList.add( "active" );
-            logbtn.classList.add("non-active");
+            // logbtn.classList.remove("active");
+            // logbtn.classList.add("non-active");
+            // signbtn.classList.add("active");
+            signbtn.classList.toggle("active"); 
+            logbtn.classList.toggle("active");     
+            
         }  
     </script>
 
