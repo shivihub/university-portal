@@ -111,10 +111,10 @@
         alert(name+email+password+cpass);
        
        $.ajax({
-           type:"POST",
-           url:"insert.php",
-           data:{name:name,email:email,password:password,cpass:cpass},
-           sucess:function(data){
+           type: "POST",
+           url: "insert.php",
+           data: {name:name,email:email,password:password,cpass:cpass},
+           sucess: function(data){
                alert(data);
 
            }
