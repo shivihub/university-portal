@@ -44,7 +44,7 @@
                         <label >CONFIRM PASSWORD: <span style="color:red">*</span></label>
                         <input type="text" id="cpass" name="cpass" placeholder="Enter confirm password" class="form-control" required>
                         <div class="btn2">
-                        <input type="submit" id="submit" name="submit"  required onclick="" class="submit">      
+                        <input type="submit" id="submit" name="submit"  required onclick="submitdata()" class="submit">      
                         </div>  
 
                     </form>
@@ -101,6 +101,29 @@
             
         }  
     </script>
+    <script type="text/javascript">
+    function submitdata()
+    {
+        var name=document.getElementById('name').value;
+        var email=document.getElementById('email').value;
+        var password=document.getElementById('password').value;
+        var cpass=document.getElementById('cpass').value;
+        alert(name+email+password+cpass);
+       
+       $.ajax({
+           type:"POST",
+           url:"sign.php",
+           data:{name:name,email:email,password:password,cpass:cpass},
+           sucess:function(data){
+               alert(data);
+
+           }
+       });
+    }
+        </script>
+        
+
+
 
 
 </body>
