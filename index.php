@@ -112,7 +112,7 @@
        
        $.ajax({
            type:"POST",
-           url:"sign.php",
+           url:"insert.php",
            data:{name:name,email:email,password:password,cpass:cpass},
            sucess:function(data){
                alert(data);
