@@ -45,7 +45,7 @@
                         <label >CONFIRM PASSWORD: <span style="color:red">*</span></label>
                         <input type="password" id="cpass" name="cpass" placeholder="Enter confirm password" class="form-control" required>
                         <div class="btn2">
-                        <input type="submit" id="submit1" name="submit"   onclick="submitdata();" class="submit">      
+                        <input type="submit" id="submit1" name="submit1"   onclick="submitdata();" class="submit">      
                         </div>  
 
                     </form>
@@ -103,41 +103,32 @@
         }  
     </script>
     <script type="text/javascript">
+   
     function submitdata()
     {
         var uname=document.getElementById('uname').value;
         var email1=document.getElementById('email1').value;
         var password1=document.getElementById('password1').value;
         var cpass=document.getElementById('cpass').value;
-<<<<<<< HEAD:index.php
         // alert(name+email+password+cpass);
-       
-       $.ajax({
-           type:"POST",
-           url:"insert.php",
-           data: {name:name,email:email,password:password,cpass:cpass},
-           sucess: function(data){
-=======
-        if(password1!=cpass)
-            alert ("Passwords don't match");
-       else{
-       $.ajax({
-           type: "POST",
-           url: "insert.php",
-           data: {uname:uname,email1:email1,password1:password1},
-           success: function(data){
->>>>>>> f44d718067b81c9eb0df40936eea7c48729842e7:log-signup-page/index.php
-               alert(data);
+       if(password1!=cpass)
+       {
+           alert ("password dont match");
+       }
+        else
+        {
+            $.ajax({
+                type:"POST",
+                url:"insert.php",
+                data: {uname:uname,email1:email1,password1:password1},
+                success: function(data){
+                    alert(data);
 
-           }
-       });
+                }
+            });
+        }
     }
-<<<<<<< HEAD:index.php
     </script>
-=======
-    }
-        </script>
->>>>>>> f44d718067b81c9eb0df40936eea7c48729842e7:log-signup-page/index.php
         
 
 
