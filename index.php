@@ -108,11 +108,11 @@
         var email=document.getElementById('email').value;
         var password=document.getElementById('password').value;
         var cpass=document.getElementById('cpass').value;
-        alert(name+email+password+cpass);
+        // alert(name+email+password+cpass);
        
        $.ajax({
-           type: "POST",
-           url: "insert.php",
+           type:"POST",
+           url:"insert.php",
            data: {name:name,email:email,password:password,cpass:cpass},
            sucess: function(data){
                alert(data);
@@ -120,7 +120,7 @@
            }
        });
     }
-        </script>
+    </script>
         
 
 
