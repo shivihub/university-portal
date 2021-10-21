@@ -109,6 +109,15 @@
         var email1=document.getElementById('email1').value;
         var password1=document.getElementById('password1').value;
         var cpass=document.getElementById('cpass').value;
+<<<<<<< HEAD:index.php
+        // alert(name+email+password+cpass);
+       
+       $.ajax({
+           type:"POST",
+           url:"insert.php",
+           data: {name:name,email:email,password:password,cpass:cpass},
+           sucess: function(data){
+=======
         if(password1!=cpass)
             alert ("Passwords don't match");
        else{
@@ -117,13 +126,18 @@
            url: "insert.php",
            data: {uname:uname,email1:email1,password1:password1},
            success: function(data){
+>>>>>>> f44d718067b81c9eb0df40936eea7c48729842e7:log-signup-page/index.php
                alert(data);
 
            }
        });
     }
+<<<<<<< HEAD:index.php
+    </script>
+=======
     }
         </script>
+>>>>>>> f44d718067b81c9eb0df40936eea7c48729842e7:log-signup-page/index.php
         
 
 

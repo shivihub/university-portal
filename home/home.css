@@ -1,0 +1,19 @@
+*{
+    margin: 0px !important;
+    padding: 0px !important;
+
+}
+.contain{
+    float: left;
+    width: 100%;
+}
+.sidebar{
+    background-color: blue;
+}
+ul{
+    text-decoration: none;
+    list-style: none;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
