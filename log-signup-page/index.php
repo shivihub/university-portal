@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="bootstrap.min.css">
-    <link rel="stylesheet" href="normalize.min.css">
+    <link rel="stylesheet" href="../bootstrap.min.css">
+    <link rel="stylesheet" href="../normalize.min.css">
     <link rel="stylesheet" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>SIGN UP PAGE</title>
 </head>
 <body>
@@ -36,15 +37,15 @@
                 <div class="contain form sign" id="signup" style="display:none">
                     <form >
                         <label >NAME: <span style="color:red">*</span></label>
-                        <input type="text" id="name" name="name" placeholder="Enter your name" class="form-control" required>
+                        <input type="text" id="uname" name="uname" placeholder="Enter your name" class="form-control" required>
                         <label >EMAIL: <span style="color:red">*</span></label>
-                        <input type="text" id="email" name="email" placeholder="Enter your email" class="form-control" required>
+                        <input type="email" id="email1" name="email1" placeholder="Enter your email" class="form-control" required>
                         <label >PASSWORD: <span style="color:red">*</span></label>
-                        <input type="text" id="password" name="password" placeholder="Enter password" class="form-control" required>
+                        <input type="password" id="password1" name="password1" placeholder="Enter password" class="form-control" required>
                         <label >CONFIRM PASSWORD: <span style="color:red">*</span></label>
-                        <input type="text" id="cpass" name="cpass" placeholder="Enter confirm password" class="form-control" required>
+                        <input type="password" id="cpass" name="cpass" placeholder="Enter confirm password" class="form-control" required>
                         <div class="btn2">
-                        <input type="submit" id="submit" name="submit"  required onclick="submitdata()" class="submit">      
+                        <input type="submit" id="submit1" name="submit"   onclick="submitdata();" class="submit">      
                         </div>  
 
                     </form>
@@ -54,9 +55,9 @@
                     <form >
                         
                         <label >EMAIL: <span style="color:red">*</span></label>
-                        <input type="text" id="email" name="email" placeholder="Enter your email" class="form-control" required>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" class="form-control" required>
                         <label >PASSWORD: <span style="color:red">*</span></label>
-                        <input type="text" id="password" name="password" placeholder="Enter password" class="form-control" required>
+                        <input type="password" id="password" name="password" placeholder="Enter password" class="form-control" required>
                         <div class="btn2">
                         <input type="submit" id="submit" name="submit"  required onclick="" class="submit">      
                         </div>  
@@ -104,10 +105,11 @@
     <script type="text/javascript">
     function submitdata()
     {
-        var name=document.getElementById('name').value;
-        var email=document.getElementById('email').value;
-        var password=document.getElementById('password').value;
+        var uname=document.getElementById('uname').value;
+        var email1=document.getElementById('email1').value;
+        var password1=document.getElementById('password1').value;
         var cpass=document.getElementById('cpass').value;
+<<<<<<< HEAD:index.php
         // alert(name+email+password+cpass);
        
        $.ajax({
@@ -115,12 +117,27 @@
            url:"insert.php",
            data: {name:name,email:email,password:password,cpass:cpass},
            sucess: function(data){
+=======
+        if(password1!=cpass)
+            alert ("Passwords don't match");
+       else{
+       $.ajax({
+           type: "POST",
+           url: "insert.php",
+           data: {uname:uname,email1:email1,password1:password1},
+           success: function(data){
+>>>>>>> f44d718067b81c9eb0df40936eea7c48729842e7:log-signup-page/index.php
                alert(data);
 
            }
        });
     }
+<<<<<<< HEAD:index.php
     </script>
+=======
+    }
+        </script>
+>>>>>>> f44d718067b81c9eb0df40936eea7c48729842e7:log-signup-page/index.php
         
 
 
