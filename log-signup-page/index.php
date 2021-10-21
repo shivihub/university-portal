@@ -59,7 +59,7 @@
                         <label >PASSWORD: <span style="color:red">*</span></label>
                         <input type="password" id="password" name="password" placeholder="Enter password" class="form-control" required>
                         <div class="btn2">
-                        <input type="submit" id="submit" name="submit"  required onclick="" class="submit">      
+                        <input type="submit" id="submit" name="submit" onclick="getdata();" class="submit"   required>      
                         </div>  
 
                     </form>
@@ -128,7 +128,36 @@
             });
         }
     }
+// get data **************
+    function getdata()
+    {
+       
+        var email=document.getElementById('email').value;
+        var password=document.getElementById('password').value;
+       
+       
+        
+        
+            $.ajax({
+                type:"POST",
+                url:"getdata.php",
+                data: {email:email,password:password},
+                success: function(data){
+                   
+                   if(data==0)
+                   window.location.href="../home/home.html";
+                   else
+                   alert (data);
+
+                }
+            });
+        }
+    
+    
+
+    
     </script>
+
         
 
 
