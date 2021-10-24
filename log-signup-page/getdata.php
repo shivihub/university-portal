@@ -7,22 +7,21 @@
     $query->execute($data);
     if($query->rowcount()==1)
     {
-        if( $datarow=$query->fetch())
-
+         while( $datarow=$query->fetch())
         {
-            // echo $password." ".$datarow['pass'];
+        
+            //  echo $password." ".$datarow['pass'];
             if($password==$datarow['pass'])
             echo 0 ;
             else 
             echo 1;
              
         }
-        else 
-        echo 2;
+        
     }
 
-
- 
+    else
+        echo "sign up first";
 
 
 

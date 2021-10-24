@@ -3,12 +3,45 @@
     padding: 0px !important;
 
 }
+body{
+    height: 100vh;
+}
+
 .contain{
     float: left;
     width: 100%;
 }
+.header
+{
+    background-color:rgb(9, 65, 97) ;
+    color: white;
+    font-weight: 600;
+    font-size: 25px;
+    padding: 15px !important;
+    /* margin-bottom: 5px !important; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.user{
+    float: right !important;
+    text-align: end;
+}
+
 .sidebar{
-    background-color: blue;
+    background-color: rgb(9, 65, 97);
+    left: 0px;
+    top: 0px;
+    position: relative;
+    height: 92vh;
+    padding: 5px  20px !important;
+
+    
+}
+.sidebar ul li {
+    margin-bottom: 20px !important;
+}
+.sidebar ul li a{
+    color:white !important;
+
 }
 ul{
     text-decoration: none;
@@ -17,3 +50,9 @@ ul{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
+.logout{
+    bottom: 20px !important;
+    position:absolute !important;
+    /* padding: 5px  20px !important; */
+}
+

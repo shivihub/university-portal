@@ -59,7 +59,7 @@
                         <label >PASSWORD: <span style="color:red">*</span></label>
                         <input type="password" id="password" name="password" placeholder="Enter password" class="form-control" required>
                         <div class="btn2">
-                        <input type="submit" id="submit" name="submit" onclick="getdata();" class="submit"   required>      
+                        <input type="submit" id="submit" name="submit" onclick="getdata();" class="submit"   >      
                         </div>  
 
                     </form>
@@ -145,9 +145,13 @@
                 success: function(data){
                    
                    if(data==0)
+                        // alert (data);
                    window.location.href="../home/home.html";
+                   if (data==1)
+                  
+                   alert ("incorrect  password ");
                    else
-                   alert (data);
+                    alert (data);
 
                 }
             });
