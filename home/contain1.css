@@ -19,28 +19,39 @@
 }
 .side-bar ul{
     background-color:rgb(9, 65, 97);
-    text-decoration: none;
+    text-decoration: none !important;
     font-size: 20px !important;
     line-height: 2;
     height: 92vh;
-   
-    list-style: none;
+    /* position: absolute;
+    left: 20px !important; */
+   /* list-style:circle !important; */
 }
+
 .side-bar ul li a{
-    color: white!important;
+    color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0px 20px!important;
     
 }
+.side-bar ul li a:hover{
+    text-decoration: none !important;
+}
 .side-bar ul li:hover{
-     border-left: 3px  solid white;
+     border-left: 3px solid white;
      /* //box-shadow: 2px 0px 5px  white; */
 }
-.aca-drop{
-    display: none;
+.side-bar ul li ul li a{
+    position:absolute !important;
+    left: 15% !important;
+    /* display: inline; */
+    color: white !important;
+    background-color: rgb(9, 65, 97) !important;
+    height: auto !important;
+    /* display: none; */
 
 }
-.logout{
-    bottom: 20px!important;
+/* .logout{ 
     position:absolute !important;
-}
+    bottom: 20px!important;
+} */
