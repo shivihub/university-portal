@@ -1,0 +1,30 @@
+*{
+    padding: 0px !important;
+    margin: 0px !important;
+}
+.contain{
+    float:left;
+    width:100%;
+}
+.nav-bar{
+    color:white;
+    font-size: 25px;
+    background-color:rgb(9, 65, 97) ;
+    display: flex !important;
+    align-items: center !important;
+    padding: 10px !important;
+    font-family: serif !important;
+}
+.side-bar ul{
+    background-color:rgb(9, 65, 97);
+    text-decoration: none;
+    font-size: 20px !important;
+    line-height: 1.5;
+}
+.side-bar ul li a{
+    color: white!important;
+}
+.side-bar ul li ul .aca-drop{
+    display: none;
+
+}

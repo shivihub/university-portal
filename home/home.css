@@ -14,7 +14,7 @@ body{
 .header
 {
     background-color:rgb(9, 65, 97) ;
-    color: white;
+    color: #fdfbfb;
     font-weight: 600;
     font-size: 25px;
     padding: 15px !important;
@@ -31,7 +31,7 @@ body{
     left: 0px;
     top: 0px;
     position: relative;
-    height: 92vh;
+    height: 92vh; 
     padding: 5px  20px !important;
 
     
@@ -51,8 +51,10 @@ ul{
 
 }
 .logout{
-    bottom: 20px !important;
+    bottom: 20px!important;
     position:absolute !important;
     /* padding: 5px  20px !important; */
 }
-
+.drop{
+    display:none !important;
+}

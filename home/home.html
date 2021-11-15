@@ -16,7 +16,7 @@
             <div class="contain header">
                 <div class="col-sm-3">
                     <div class="contain">
-                        <i class="bx bx-menu"> </i>
+                        <i class="bx bx-menu"> </i> 
                       <span>BANASTHALI VIDHYAPEETH</span>
                     </div>
                 </div>
@@ -44,11 +44,39 @@
                             </a>
                         </li>
                        
-                        <li>
+                        <li  >
                             <a href="#">
                                 <i class="bx bx-book-bookmark"></i>
-                                <span> Academics</span>  
+                                <span class="dropdwn" onclick="menu_dropdwn()">  Academics</span> 
+                                <span class="fas fa-caret-down first"></span> 
                             </a>
+                            <ul class="drop">
+                                <li>
+                                    <a href="#">
+                                        <i class=" "></i>
+                                        <span>Result</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class=" "></i>
+                                        <span>Time Table</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class=" "></i>
+                                        <span>lorem</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class=" "></i>
+                                        <span>dummy</span>
+                                    </a>
+                                </li>
+                            </ul>
+
                         </li>
                         <li>
                            
@@ -86,4 +114,16 @@
         </div>
     </div>
 </body>
+<script    type="text/javascript">
+     var dropdwn=document.getElementByClass("dropdwn");
+    //  dropdwn.onclick= function (){
+    //     menu_dropdwn();
+    //  }
+     function menu_dropdwn(){
+        dropdwn.style.display="block";
+
+     }
+
+</script>
+
 </html>

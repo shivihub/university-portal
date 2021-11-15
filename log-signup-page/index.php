@@ -13,6 +13,7 @@
 <body>
    
     <h1>APPONITMENT BOOKING SYSTEM</h1>
+    <!-- button -->
     <div class="col-sm-12">
         <div class="contain">
             <div class="col-sm-4"></div>
@@ -108,7 +109,7 @@
     {
         var uname=document.getElementById('uname').value;
         var email1=document.getElementById('email1').value;
-        var password1=document.getElementById('password1').value;
+        var password1="<?php  password_hash ('password1', PASSWORD_DEFAULT);?>";
         var cpass=document.getElementById('cpass').value;
         // alert(name+email+password+cpass);
        if(password1!=cpass)
