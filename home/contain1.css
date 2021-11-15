@@ -10,21 +10,29 @@
     color:white;
     font-size: 25px;
     background-color:rgb(9, 65, 97) ;
-    display: flex !important;
-    align-items: center !important;
-    padding: 10px !important;
+    padding: 9px !important;
     font-family: serif !important;
+}
+.nav{
+    display: flex;
+    align-items: center;
 }
 .side-bar ul{
     background-color:rgb(9, 65, 97);
     text-decoration: none;
     font-size: 20px !important;
     line-height: 1.5;
+    height: 92vh;
 }
 .side-bar ul li a{
     color: white!important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.side-bar ul li ul .aca-drop{
+.aca-drop{
     display: none;
 
+}
+.logout{
+    bottom: 20px!important;
+    position:absolute !important;
 }
