@@ -11,7 +11,7 @@
     font-size: 25px;
     background-color:rgb(9, 65, 97) ;
     padding: 9px !important;
-    font-family: serif !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .nav{
     display: flex;
@@ -21,12 +21,20 @@
     background-color:rgb(9, 65, 97);
     text-decoration: none;
     font-size: 20px !important;
-    line-height: 1.5;
+    line-height: 2;
     height: 92vh;
+   
+    list-style: none;
 }
 .side-bar ul li a{
     color: white!important;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px 20px!important;
+    
+}
+.side-bar ul li:hover{
+     border-left: 3px  solid white;
+     /* //box-shadow: 2px 0px 5px  white; */
 }
 .aca-drop{
     display: none;
