@@ -8,7 +8,7 @@
     $query->execute($data);
     if($query->rowcount()>0)
     {
-         while( $datarow=$query->fetch())
+         while($datarow=$query->fetch())
         {
             
             // echo "yes2 ".$password;
@@ -16,7 +16,6 @@
             if($password== $datarow['pass']){
                 // echo "yes3 ";
                 $_SESSION['uname'] = $datarow['uname'];
-                
                 echo 0;
             }
             else 

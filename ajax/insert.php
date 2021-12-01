@@ -11,8 +11,8 @@
     
     $execute=$query->execute($data);
      if($execute)
-     echo 0;
+        echo 0;
      else
-    echo 1;
+        echo 1;
 
 ?>

@@ -24,6 +24,7 @@ body{
 .user{
     float: right !important;
     text-align: end;
+    font-size: 20px;
 }
 
 .sidebar{

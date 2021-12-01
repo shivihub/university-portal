@@ -13,7 +13,7 @@
 </head>
 <body>
    
-    <h1>APPONITMENT BOOKING SYSTEM</h1>
+    <h1>BANASTHALI PORTAL</h1>
     <!-- button -->
     <div class="col-sm-12">
         <div class="contain">
@@ -126,7 +126,7 @@
                 data: {uname:uname,email1:email1,password1:password1},
                 success: function(data){
                     if(data==0)
-                        window.location.href="../home/home.php";
+                        window.location.href="./home.php";
                     if (data==1)
                         alert ("incorrect  password ");
 
@@ -136,7 +136,6 @@
     }
 // get data **************
 
-    // getdata();
     function getdata()
     {
        
@@ -152,9 +151,8 @@
                 if(data==0)
                     window.location.href="./home.php";
 
-                if (data==1)
-                    alert("k");
-                    // alert ("incorrect  password ");
+                else if (data==1)
+                    alert ("incorrect  password ");
                 else
 
                     alert (data);
