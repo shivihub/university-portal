@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../bootstrap.min.css">
     <link rel="stylesheet" href="../normalize.min.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../css/index.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>SIGN UP PAGE</title>
 </head>
@@ -109,53 +110,57 @@
     {
         var uname=document.getElementById('uname').value;
         var email1=document.getElementById('email1').value;
-        var password1="<?php  password_hash ('password1', PASSWORD_DEFAULT);?>";
+        var password1=document.getElementById('password1').value
         var cpass=document.getElementById('cpass').value;
-        // alert(name+email+password+cpass);
        if(password1!=cpass)
        {
-           alert ("password dont match");
+           alert ("password don't match");
        }
+       
         else
         {
+
             $.ajax({
                 type:"POST",
-                url:"insert.php",
+                url:"../ajax/insert.php",
                 data: {uname:uname,email1:email1,password1:password1},
                 success: function(data){
-                    alert(data);
+                    if(data==0)
+                        window.location.href="../home/home.php";
+                    if (data==1)
+                        alert ("incorrect  password ");
 
                 }
             });
         }
     }
 // get data **************
+
+    // getdata();
     function getdata()
     {
        
         var email=document.getElementById('email').value;
         var password=document.getElementById('password').value;
-       
-       
-        
-        
-            $.ajax({
-                type:"POST",
-                url:"getdata.php",
-                data: {email:email,password:password},
-                success: function(data){
-                   
-                   if(data==0)
-                        // alert (data);
-                   window.location.href="../home/home.html";
-                   if (data==1)
-                  
-                   alert ("incorrect  password ");
-                   else
+
+        $.ajax({
+            type:"POST",
+            url:"../ajax/getdata.php",
+            data: {email:email,password:password},
+            success: function(data){
+                
+                if(data==0)
+                    window.location.href="./home.php";
+
+                if (data==1)
+                    alert("k");
+                    // alert ("incorrect  password ");
+                else
+
                     alert (data);
 
-                }
-            });
+            }
+        });
         }
     
     

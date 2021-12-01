@@ -1,10 +1,13 @@
+<?php 
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../bootstrap.min.css">
     <link rel="stylesheet" href="../normalize.min.css">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
@@ -24,7 +27,7 @@
                 <div class="col-sm-3">
                     <DIV class="contain user" >
                         <i class="bx bx-user"></i>
-                        <span >users</span>
+                        <span><?php echo $_SESSION['uname']?></span>
                     </DIV>
                 </div>
             </div>
@@ -35,16 +38,14 @@
             <div class="col-sm-2">
                 <div class="contain sidebar">
                     <ul>
-                        
                         <li>
-                            
                             <a href="#">
                                 <i class='bx bx-home' type="solid"></i>
                                 <span>Home</span>  
                             </a>
                         </li>
                        
-                        <li  >
+                        <li >
                             <a href="#">
                                 <i class="bx bx-book-bookmark"></i>
                                 <span class="dropdwn" onclick="menu_dropdwn()">  Academics</span> 
@@ -114,7 +115,7 @@
         </div>
     </div>
 </body>
-<script    type="text/javascript">
+<!-- <script    type="text/javascript">
      var dropdwn=document.getElementByClass("dropdwn");
     //  dropdwn.onclick= function (){
     //     menu_dropdwn();
@@ -122,7 +123,7 @@
      function menu_dropdwn(){
         dropdwn.style.display="block";
 
-     }
+     } -->
 
 </script>
 
