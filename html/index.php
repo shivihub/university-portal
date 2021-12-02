@@ -125,8 +125,12 @@
                 url:"../ajax/insert.php",
                 data: {uname:uname,email1:email1,password1:password1},
                 success: function(data){
+                    alert(data);
                     if(data==0)
-                        window.location.href="./home.php";
+                    
+                    alert ("Sign Up successfully");
+
+                        // window.location.href="./home.php";
                     if (data==1)
                         alert ("incorrect  password ");
 
@@ -160,11 +164,18 @@
             }
         });
         }
+    </script>
+
+        <script type="text/javascript">
+            $('form').submit(function(e) {
+            e.preventDefault();
+        });
+        </script>
     
     
 
     
-    </script>
+  
 
         
 

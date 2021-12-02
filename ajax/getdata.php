@@ -11,10 +11,10 @@
         while($datarow=$query->fetch())
         {
             
-            // echo "yes2 ".$password;
-            // if(password_verify($password , $datarow['pass'])){
-            if($password== $datarow['pass']){
-                // echo "yes3 ";
+            echo $password;
+            if(password_verify($password,$datarow['pass']))
+            {
+                // if($password== $datarow['pass']){
                 $_SESSION['uname'] = $datarow['uname'];
                 echo 0;
             }
