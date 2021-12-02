@@ -59,3 +59,13 @@ ul{
 .drop{
     display:none !important;
 }
+@media screen and (max-width: 500px) {
+    .sidebar , .user{
+      /* background-color: olive !important; */
+      text-align: center !important;
+      
+    }
+    .sidebar{
+        margin-left:-1000px !important;
+    }
+  }

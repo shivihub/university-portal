@@ -8,8 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/home.css">
-    <link rel="stylesheet" href="../bootstrap.min.css">
-    <link rel="stylesheet" href="../normalize.min.css">
+    <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap/normalize.min.css">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <title>HOME PAGE</title>
 </head>
@@ -19,7 +19,7 @@
             <div class="contain header">
                 <div class="col-sm-3">
                     <div class="contain">
-                        <i class="bx bx-menu"> </i> 
+                        <i  class="bx bx-menu hamburger"> </i> 
                       <span>BANASTHALI VIDHYAPEETH</span>
                     </div>
                 </div>
@@ -125,6 +125,13 @@
 
      } -->
 
-</script>
+<!-- </script> -->
+     <!-- <script type="text/javascript">
+         function show-menu(){
+            var ham = document.getElementByClass("hamburger");
+            ham.style.marginLeft = 0px;
+         }
+     </script> -->
+     
 
 </html>
