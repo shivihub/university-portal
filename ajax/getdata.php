@@ -8,7 +8,7 @@
     $query->execute($data);
     if($query->rowcount()>0)
     {
-         while($datarow=$query->fetch())
+        while($datarow=$query->fetch())
         {
             
             // echo "yes2 ".$password;
