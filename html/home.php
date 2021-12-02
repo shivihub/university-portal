@@ -101,7 +101,8 @@
                         <li>
                             <a class="logout" href="#">
                                 <i class="bx bx-log-out"></i>
-                                <span >Log Out</span>  
+                                <a href= "logout.php">Log Out</a>
+                                <!-- <span >Log Out</span>   -->
                             </a>
                         </li>
                     </ul>
