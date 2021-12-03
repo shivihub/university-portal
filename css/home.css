@@ -31,7 +31,8 @@ body{
     background-color: rgb(9, 65, 97);
     left: 0px;
     top: 0px;
-    position: relative;
+    position:relative;
+    /* z-index: 3; */
     height: 92vh; 
     padding: 5px  20px !important;
 
@@ -55,6 +56,10 @@ ul{
     bottom: 20px!important;
     position:absolute !important;
     /* padding: 5px  20px !important; */
+}
+.logout a{
+    bottom: 20px!important;
+    position:absolute !important;
 }
 .drop{
     display:none !important;

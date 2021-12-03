@@ -5,7 +5,7 @@
     $email1=$_POST['email1'];
     $password1=$_POST['password1'];
    //  $hashpass =  password_hash('password1', PASSWORD_DEFAULT);
-   echo $password1;
+   // echo $password1;
     $query = $db->prepare('INSERT INTO student(uname,email,pass) VALUES (?,?,?)');
     $data=array($uname,$email1,$password1);
     

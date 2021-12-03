@@ -125,12 +125,12 @@
                 url:"../ajax/insert.php",
                 data: {uname:uname,email1:email1,password1:password1},
                 success: function(data){
-                    alert(data);
-                    if(data==0)
-                    
-                    alert ("Sign Up successfully");
-
-                        // window.location.href="./home.php";
+                    // alert(data);
+                    if(data==0){
+                        alert ("Sign Up succeed");
+                        alert("Now Login to continue");
+                        // window.location.reload();
+                        window.location.href="./index.php";}
                     if (data==1)
                         alert ("incorrect  password ");
 

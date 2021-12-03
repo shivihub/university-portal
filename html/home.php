@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/home.css">
+    
     <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="../bootstrap/normalize.min.css">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
@@ -46,7 +47,7 @@
                         </li>
                        
                         <li >
-                            <a href="#">
+                            <a href="./result.php">
                                 <i class="bx bx-book-bookmark"></i>
                                 <span class="dropdwn" onclick="menu_dropdwn()">  Academics</span> 
                                 <span class="fas fa-caret-down first"></span> 
@@ -98,10 +99,10 @@
                                 <span>Contact Us</span>  
                             </a>
                         </li>
-                        <li>
-                            <a class="logout" href="#">
+                        <li class="logout">
+                            <a  href="#">
                                 <i class="bx bx-log-out"></i>
-                                <a href= "logout.php">Log Out</a>
+                                <a href= "../ajax/logout.php">Log Out </a>
                                 <!-- <span >Log Out</span>   -->
                             </a>
                         </li>
