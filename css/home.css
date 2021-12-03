@@ -5,6 +5,10 @@
 }
 body{
     height: 100vh;
+    overflow: hidden;
+}
+#mid-section{
+    overflow: scroll !important;
 }
 
 .contain{
@@ -54,7 +58,7 @@ ul{
 }
 .logout{
     bottom: 20px!important;
-    position:absolute !important;
+    /* position:absolute !important; */
     /* padding: 5px  20px !important; */
 }
 .logout a{

@@ -100,16 +100,16 @@
                             </a>
                         </li>
                         <li class="logout">
-                            <a  href="#">
+                            <!-- <a  href="#"> -->
                                 <i class="bx bx-log-out"></i>
-                                <a href= "../ajax/logout.php">Log Out </a>
+                                <span><a href= "../ajax/logout.php"> Log Out </a></span>
                                 <!-- <span >Log Out</span>   -->
-                            </a>
+                            <!-- </a> -->
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="col-sm-10">
+            <div class="col-sm-10" id="mid-section">
                 <div class="contain">
 
                 </div>

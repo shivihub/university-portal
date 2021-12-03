@@ -112,7 +112,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-sm-10">
+            <div class="col-sm-10" id="mid-section">
                 <div class="contain">
                     <div class="result-heading"><h1>Result</h1></div>
                     <div class="select-section">
