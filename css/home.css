@@ -3,9 +3,16 @@
     padding: 0px !important;
 
 }
+::selection{
+    background-color:yellow;
+}
 body{
     height: 100vh;
+    /* overflow: hidden; */
 }
+/* #mid-section{
+    overflow: scroll !important;
+} */
 
 .contain{
     float: left;
@@ -35,8 +42,6 @@ body{
     /* z-index: 3; */
     height: 92vh; 
     padding: 5px  20px !important;
-
-    
 }
 .sidebar ul li {
     margin-bottom: 20px !important;
@@ -55,11 +60,12 @@ ul{
 .logout{
     bottom: 20px!important;
     position:absolute !important;
+    color: white;
     /* padding: 5px  20px !important; */
 }
 .logout a{
-    bottom: 20px!important;
-    position:absolute !important;
+    /* bottom: 20px!important;
+    position:absolute !important; */
 }
 .drop{
     display:none !important;
