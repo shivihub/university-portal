@@ -45,6 +45,15 @@
                                 <span>Home</span>  
                             </a>
                         </li>
+
+                        <li>
+                            <a href="#">
+                                <i class='bx bx-home' type="solid"></i>
+                                <span>Profile</span>  
+                            </a>
+                        </li>
+
+
                        
                         <li >
                             <a href="./result.php">
@@ -109,7 +118,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-sm-10" id="mid-section">
+            <div class="col-sm-10" >
                 <div class="contain">
 
                 </div>

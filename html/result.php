@@ -112,8 +112,8 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-sm-10" id="mid-section">
-                <div class="contain">
+            <div class="col-sm-10" >
+                <div class="contain" id="mid-section">
                     <div class="result-heading"><h1>Result</h1></div>
                     <div class="select-section">
                         <div class="drop-down-heading">Select Semester</div>
@@ -197,9 +197,26 @@
                                     <td>A</td>
                                     <TD>GOOD</TD>
                                 </tr>
-                
                             </table>
                         </div>
+
+                        <div class="table">
+                        <table>
+                                <tr>
+                                    <th  style="text-align:left ,width:80%!important">Semester Grade Point Average (SGPA)</th>
+                                    <th>9.38</th>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="table">
+                        <table>
+                                <tr>
+                                    <th  style="text-align:left,width:80%">Cumulative Grade Point Average (CGPA) upto Fourth Semester</th>
+                                    <th>9.01</th>
+                                </tr>
+                            </table>
+                        </div>
+                        
                 </div>
             </div> 
 

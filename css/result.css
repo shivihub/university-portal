@@ -53,4 +53,6 @@ table{
 #course{
     text-align: left !important;
 }
-
+#mid-section{
+    overflow: scroll !important;
+}
