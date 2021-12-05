@@ -9,7 +9,7 @@
 
         <li>
             <a href="#">
-                <i class='bx bx-home' type="solid"></i>
+                <i class='bx bx-id-card' type="solid"></i>
                 <span>Profile</span>  
             </a>
         </li>
