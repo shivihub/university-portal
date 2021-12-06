@@ -19,7 +19,15 @@
              foreach($object->getWorksheetIterator() as $worksheet){
                  $rowcount = $worksheet->getHighestRow();
                  for($row=2; $row<=$rowcount;$row++){
-
+                    $fname=$worksheet->getCellByColumnAndRow(0,$row)->getValue();
+                    $uname=$worksheet->getCellByColumnAndRow(1,$row)->getValue();
+                    $query = $db->prepare('INSERT INTO Book1(fname,uname) Values (?,?)');
+                    $data = array($fname,$uname);
+                    $execute=$query->execute($data);
+                    if($execute)
+                    {
+                        echo 0;
+                    }
                  }
              }
             

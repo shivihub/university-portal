@@ -151,7 +151,6 @@
             url:"../ajax/getdata.php",
             data: {email:email,password:password},
             success: function(data){
-                // alert(data);
                 if(data==0)
                     window.location.href="./home.php";
 

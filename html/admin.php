@@ -33,7 +33,6 @@
         function send(){
             var excel_form=document.getElementById('excel_form');
             var data=new FormData(excel_form); 
-            // alert("done..");
             $.ajax(
                 {
                 type:"POST",
