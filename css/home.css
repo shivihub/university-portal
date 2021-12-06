@@ -4,7 +4,7 @@
 
 }
 ::selection{
-    background-color:yellow;
+    background-color:rgb(230, 230, 216);
 }
 body{
     height: 100vh;

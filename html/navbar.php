@@ -9,10 +9,10 @@
                 </div>
                 <div class="col-sm-6"></div>
                 <div class="col-sm-3">
-                    <DIV class="contain user" >
+                    <div class="contain user" >
                         <i class="bx bx-user"></i>
                         <span><?php echo $_SESSION['uname']?></span>
-                    </DIV>
+                    </div>
                 </div>
             </div>
         </div>

@@ -64,12 +64,12 @@
      </li>
     </ul>
   </div>
-  <section class="home-section">
+  <!-- <section class="home-section">
         <div class="text">BANASTHALI VIDHYAPITH</div>
-        <div style="height: 1000px; width:100%; background-color: red;"></div>
+        <!-- <div style="height: 1000px; width:100%; background-color: red;"></div>
         <div style="height: 1000px; width:100%; background-color: green;"></div>
-        
-  </section>
+         -->
+  <!-- </section> --> -->
 
 
   <script>

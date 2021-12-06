@@ -22,8 +22,7 @@
                 <?php include("./sidebar.php")?>
             </div>
             <div class="col-sm-10" >
-                <div class="contain">
-                    hwloo
+                <div class="contain">         
                 </div>
             </div>
         </div>
