@@ -115,7 +115,7 @@
                     <div class="table">
                     <table>
                             <tr>
-                                <th  style="text-align:left ,width:80%!important">Semester Grade Point Average (SGPA)</th>
+                                <th  style="text-align:left; width:80%!important;">Semester Grade Point Average (SGPA)</th>
                                 <th>9.38</th>
                             </tr>
                         </table>
@@ -123,7 +123,7 @@
                     <div class="table">
                     <table>
                             <tr>
-                                <th  style="text-align:left,width:80%!important">Cumulative Grade Point Average (CGPA) upto Fourth Semester</th>
+                                <th  style="text-align:left; width:80%!important;">Cumulative Grade Point Average (CGPA) upto Fourth Semester</th>
                                 <th>9.01</th>
                             </tr>
                         </table>

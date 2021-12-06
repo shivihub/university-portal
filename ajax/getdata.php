@@ -10,9 +10,6 @@
     {
         while($datarow=$query->fetch())
         {
-            
-            // echo password_verify('1234', $datarow['pass']);
-            // echo $datarow['pass'];
             // if(password_verify('1234', $datarow['pass']))
             // {
             if($password== $datarow['pass']){
