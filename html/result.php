@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../css/result.css">
     <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="../bootstrap/normalize.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <title>HOME PAGE</title>
 </head>
@@ -31,19 +32,20 @@
                     <div class="select-section">
                         <div class="drop-down-heading">Select Semester</div>
                         <div class="drop-down">                           
-                            <select id="" name="select">
+                            <select id="sem_option" name="select" onChange="update();">
                                 <option value="">--Select--</option>
-                                <option value="sem1">First Semester</option>
-                                <option value="sem2">Second Semester</option>
-                                <option value="sem3">Third Semester</option>
-                                <option value="sem4">Fourth Semester</option>
-                                <option value="sem5">Fifth Semester</option>
-                                <option value="sem6">Sixth Semester</option>
-                                <option value="sem7">Seventh Semester</option>
-                                <option value="sem8">Eighth Semester</option>
+                                <option value="1">First Semester</option>
+                                <option value="2">Second Semester</option>
+                                <option value="3">Third Semester</option>
+                                <option value="4">Fourth Semester</option>
+                                <option value="5">Fifth Semester</option>
+                                <option value="6">Sixth Semester</option>
+                                <option value="7">Seventh Semester</option>
+                                <option value="8">Eighth Semester</option>
                             </select>
                         </div>
                     </div>
+
 
                         <!-- table start***************************** -->
 
@@ -132,6 +134,27 @@
             </div>
         </div>
     </div>
+    <script>
+        function update() {
+				var select = document.getElementById('sem_option');
+				var option = select.options[select.selectedIndex].value;
+                    // console.log(option);
+                $.ajax({
+                    type:"POST",
+                    url:"../ajax/show_courses.php",
+                    data: {option:option},
+                    success: function(data){
+                        alert(data);
+                   
+
+                    }
+                });
+        }
+			
+
+		
+
+    </script>
 </body>
 
 

@@ -1,7 +1,16 @@
 <?php
-    session_start();
     include('connection.php');
-    $email=$_POST['email'];
+    $option=$_POST['option'];
+    $query = $db->prepare('SELECT * FROM courses_of_ece WHERE semester=? ');
+    $data=array($option);
+    $query->execute($data);
+    while($datarow=$query->fetch()){
+        echo $datarow['semester']." ";
+    }
+?>
+
+
+<!-- $email=$_POST['email'];
     $password=$_POST['password'];
     $query = $db->prepare('SELECT * FROM student WHERE email=? ');
     $data=array($email);
@@ -26,6 +35,4 @@
     else
         echo "sign up first";
 
-
-
-?>
+ -->

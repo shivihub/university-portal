@@ -1,0 +1,34 @@
+.info-option{
+    margin:20px 0px!important;
+    display: flex;
+    justify-content: flex-start;
+}
+.option{
+    padding: 15px !important;
+    font-size: 1.3em !important;
+}
+
+th,td{
+    padding:5px 10px!important;
+    border-bottom: 3px white solid !important;
+}
+.table-heading{
+    text-align: center;
+    font-size: 1.3em;
+    padding: 5px 0px!important;
+    background-color: #0aa4fc;
+    color: azure;
+}
+table{
+    font-size: 1.1em;
+    width: 100%;
+    text-transform: capitalize;
+}
+th
+{
+ width: 50%;
+ background-color:#c9c9c1;
+}
+td{
+    background-color:#cd84bffc;
+}

@@ -19,12 +19,11 @@
              foreach($object->getWorksheetIterator() as $worksheet){
                  $rowcount = $worksheet->getHighestRow();
                  for($row=2; $row<=$rowcount;$row++){
-                    $student_name=$worksheet->getCellByColumnAndRow(0,$row)->getValue();
-                    $email=$worksheet->getCellByColumnAndRow(1,$row)->getValue();
-                    $pass=$worksheet->getCellByColumnAndRow(2,$row)->getValue();
-                    $id=$worksheet->getCellByColumnAndRow(3,$row)->getValue();
-                    $query = $db->prepare('INSERT INTO student(student_name,email,pass,id) Values (?,?,?,?)');
-                    $data = array($student_name,$email,$pass,$id);
+                    $course_name=$worksheet->getCellByColumnAndRow(0,$row)->getValue();
+                    $course_code=$worksheet->getCellByColumnAndRow(1,$row)->getValue();
+                    $semester=$worksheet->getCellByColumnAndRow(2,$row)->getValue();
+                    $query = $db->prepare('INSERT INTO courses_of_ece(course_name,course_code,semester) Values (?,?,?)');
+                    $data = array($course_name,$course_code,$semester);
                     $execute=$query->execute($data);
                     if($execute)
                     {

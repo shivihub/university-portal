@@ -8,7 +8,7 @@
         </li>
 
         <li>
-            <a href="#">
+            <a href="./profile.php">
                 <i class='bx bx-id-card' type="solid"></i>
                 <span>Profile</span>  
             </a>
