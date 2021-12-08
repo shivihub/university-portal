@@ -5,7 +5,7 @@
     $data=array($option);
     $query->execute($data);
     while($datarow=$query->fetch()){
-        echo $datarow['semester']." ";
+        echo $datarow['course_name']." ";
     }
 ?>
 
