@@ -4,35 +4,49 @@
     $query = $db->prepare('SELECT * FROM courses_of_ece WHERE semester=? ');
     $data=array($option);
     $query->execute($data);
+
+    ?> 
+    <div class="table">
+        <table>
+            <tr>
+                <th>Nomenclature of Course(s)</th>
+                <th>Credit point</th>
+                <th>Grades</th>
+                <th>Remarks</th>
+            </tr>
+    <?php
     while($datarow=$query->fetch()){
-        echo $datarow['semester']." ";
-    }
-?>
-
-
-<!-- $email=$_POST['email'];
-    $password=$_POST['password'];
-    $query = $db->prepare('SELECT * FROM student WHERE email=? ');
-    $data=array($email);
-    $query->execute($data);
-    if($query->rowcount()>0)
-    {
-        while($datarow=$query->fetch())
-        {
-            // if(password_verify('1234', $datarow['pass']))
-            // {
-            if($password== $datarow['pass']){
-                $_SESSION['student_name'] = $datarow['student_name'];
-                echo 0;
-            }
-            else 
-                echo 1;
-             
-        }
+        // $courses[$count]= $datarow['course_name'];
+        // echo $courses[$count]." ";
+    ?>
         
-    }
+    <tr>
+        <td style="text-align:left;"><?php echo $datarow['course_name'] ?></td>
+        <td>O</td>
+        <td>A</td>
+        <TD>GOOD</TD>
+    </tr>
+                            
+                       
+    <?php
+    }?>
+    </table>
+</div>
+<div class="table">
+    <table>
+            <tr>
+                <th  style="text-align:left; width:80%!important;">Semester Grade Point Average (SGPA)</th>
+                <th style="text-align:center;">-</th>
+            </tr>
+        </table>
+    </div>
+    <div class="table">
+    <table>
+        <tr>
+            <th  style="text-align:left; width:80%!important;">Cumulative Grade Point Average (CGPA) upto Fourth Semester</th>
+            <th style="text-align:center;">-</th>
+        </tr>
+    </table>
+</div>  
 
-    else
-        echo "sign up first";
 
- -->

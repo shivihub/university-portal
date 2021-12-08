@@ -30,26 +30,21 @@ th,td{
     border: 2px solid gray;  
     padding: 20px !important;
     text-align: center;
+    text-transform: capitalize;
 }
-tr th{
-    text-align: center;
-}
+
 table{
     
     border: 2px solid gray;
     width: 70%;
-    
-    /* border-collapse: collapse; */
-      
 }
 .table{
     display: flex;
     justify-content: center;
     margin:30px 0px !important;
 }
-#course{
+.course{
+
     text-align: left !important;
 }
-#mid-section{
-    overflow: scroll !important;
-}
+
