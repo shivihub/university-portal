@@ -1,11 +1,9 @@
 .info-option{
-    margin:20px 0px!important;
+    margin-top:12% !important;
+    margin-bottom: 3% !important;
     display: flex;
     justify-content: space-evenly;
-    /* background-color: #d8ddf2; */
-    /* border-radius: 40px; */
-    /* background-image: linear-gradient(to right, rgb(108, 108, 250) , rgb(179, 14, 179)); */
-
+    
 }
 .option{
     margin: 10px !important;

@@ -25,7 +25,7 @@
                 <?php include("./sidebar.php")?>
             </div>
             <div class="col-sm-10" >
-                <div class="contain">
+                <div class="contain" style="margin-bottom:3% !important;">
                     <div class="col-sm-2"></div>
                     <div class="col-sm-8" >
                         <div class="contain">
@@ -51,7 +51,6 @@
         
     
         var id= <?php echo json_encode($_SESSION['id']); ?>;
-
         var option1=document.getElementById('option1');
         var option2=document.getElementById('option2');
         var option3= document.getElementById('option3');
