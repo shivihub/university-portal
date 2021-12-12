@@ -56,6 +56,7 @@
         var id= <?php echo json_encode($_SESSION['id']); ?>;
         function getprofile()
         {
+
             console.log(id);
             $.ajax({
                 type:"POST",
@@ -70,7 +71,7 @@
             });
          
         }  
-
+        getprofile();
         function getEducation(){
             $.ajax({
                 type:"POST",

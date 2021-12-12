@@ -145,8 +145,6 @@
 				var option = select.options[select.selectedIndex].value;
                 if(option!=0)
                 {
-                    var course= [];
-                    var i=0;
                     $.ajax({
                         type:"POST",
                         url:"../ajax/show_courses.php",
