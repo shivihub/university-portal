@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="../bootstrap/normalize.min.css">
   <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -41,43 +42,43 @@
                                 </tr>
                                 <tr>
                                     <th>Student Name</th>
-                                    <td>dummy</td>
+                                    <td id="uname">dummy</td>
                                 </tr>
                                 <tr>
                                     <th>Date Of Birth</th>
-                                    <td>12-11-1993</td>
+                                    <td id="DOB">12-11-1993</td>
                                 </tr>
                                 <tr>
                                     <th>Gender</th>
-                                    <td>Female</td>
+                                    <td id=gender>Female</td>
                                 </tr>
                                 <tr>
                                     <th>Native Language</th>
-                                    <td>Hindi</td>
+                                    <td id="native">Hindi</td>
                                 </tr>
                                 <tr>
                                     <th>Blood Group</th>
-                                    <td>A+</td>
+                                    <td id="blood_group">A+</td>
                                 </tr>
                                 <tr>
                                     <th>Physically Challenged</th>
-                                    <td>No</td>
+                                    <td id="challenged" >No</td>
                                 </tr>
                                 <tr>
                                     <th>Caste</th>
-                                    <td>General/oc</td>
+                                    <td id="caste">General/oc</td>
                                 </tr>
                                 <tr>
                                     <th>Religion</th>
-                                    <td>Hindu</td>
+                                    <td id="religion">Hindu</td>
                                 </tr>
                                 <tr>
                                     <th>Nationality</th>
-                                    <td style="font-weight:700;">INDIAN</td>
+                                    <td id="nationality" style="font-weight:700;">INDIAN</td>
                                 </tr>
                                 <tr>
                                     <th>Aadhar Number</th>
-                                    <td>xxxxxxxxxxx</td>
+                                    <td id="aadhar">xxxxxxxxxxx</td>
                                 </tr>
                                
                             </table>
@@ -154,7 +155,24 @@
             </div>
         </div>
     </div>
-    
+
+    <script type="text/javascript">
+        getprofile();
+        function getprofile()
+        {
+            var id= <?php echo $_SESSION['id']; ?>;
+           
+            $.ajax({
+                type:"POST",
+                url:"../ajax/getprofile.php",
+                data: {id:id},
+                success: function(data){
+                        alert (data);
+
+                }
+            });
+        }
+    </script>
 
 </body>
 </html>

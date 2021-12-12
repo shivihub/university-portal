@@ -1,19 +1,21 @@
 <?php
     session_start();
+    
     include('connection.php');
     $email=$_POST['email'];
     $password=$_POST['password'];
-    $query = $db->prepare('SELECT * FROM student WHERE email=? ');
-    $data=array($email);
+    $query = $db->prepare('SELECT * FROM student WHERE email=? '); //all the row where col = email will be selected
+    $data=array($email); 
     $query->execute($data);
     if($query->rowcount()>0)
     {
-        while($datarow=$query->fetch())
+       while($datarow=$query->fetch()) //convert the table into array ----->fetch()
         {
             // if(password_verify('1234', $datarow['pass']))
             // {
             if($password== $datarow['pass']){
-                $_SESSION['student_name'] = $datarow['student_name'];
+                $_SESSION['user'] = $datarow['student_name'];
+                $_SESSION['id'] = $datarow['id'];
                 echo 0;
             }
             else 

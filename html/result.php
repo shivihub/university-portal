@@ -44,7 +44,7 @@
                                 <option value="8">Eighth Semester</option>
                             </select>
                         </div>
-                    </div>
+                    </div> 
 
 
                         <!-- table start***************************** -->

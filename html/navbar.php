@@ -11,7 +11,7 @@
                 <div class="col-sm-3">
                     <div class="contain user" >
                         <i class="bx bx-user"></i>
-                        <span><?php echo $_SESSION['student_name']?></span>
+                        <span><?php echo $_SESSION['user']?></span>
                     </div>
                 </div>
             </div>
