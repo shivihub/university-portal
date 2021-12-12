@@ -48,7 +48,9 @@
   
 
     <script type="text/javascript">
-        getprofile();
+        
+    
+       
         // getHostel_info();
         // getHostel_info();
         var id= <?php echo json_encode($_SESSION['id']); ?>;
@@ -66,6 +68,7 @@
 
                 }
             });
+         
         }  
 
         function getEducation(){
@@ -95,8 +98,8 @@
 
                 }
             });
-            
         }
+        getprofile();   
     </script>
     
 

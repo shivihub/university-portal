@@ -2,14 +2,18 @@
     margin:20px 0px!important;
     display: flex;
     justify-content: space-evenly;
-    background-color: #d8ddf2;
-    border-radius: 48px;
+    /* background-color: #d8ddf2; */
+    /* border-radius: 40px; */
+    /* background-image: linear-gradient(to right, rgb(108, 108, 250) , rgb(179, 14, 179)); */
+
 }
 .option{
     margin: 10px !important;
-    padding: 10px !important;
+    padding: 20px 30px !important;
     font-size: 1.3em !important;
     cursor: pointer !important;
+    
+
 }
 
 th,td{
@@ -31,14 +35,17 @@ table{
 th
 {
  width: 50%;
- background-color:#c9c9c1;
+ background-color:rgba(229, 226, 228, 0.705);
 }
 td{
-    background-color:#cd84bffc;
+    background-color: rgb(192, 192, 252);
 }
 
 .option1:hover , .option2:hover , .option3:hover{
-    background-color: white;
-    color: rgb(155, 155, 245);
+    
     border-radius: 48px;
+    background-color: #d8ddf2;
+    font-weight: 700;
+    
+
 }
