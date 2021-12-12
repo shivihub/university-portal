@@ -31,9 +31,9 @@
                         <div class="contain">
                             
                             <div class="info-option">
-                                <div class="option option1" onClick="getprofile();">Personal Information</div>
-                                <div class="option option2"  onClick="getEducation();" >Educational Information</div>
-                                <div class="option option3" onClick="getHostel_info();">Hostel Detail</div>
+                                <div class="option option1 " id="option1" onClick="getprofile();">Personal Information</div>
+                                <div class="option option2" id="option2" onClick="getEducation();" >Educational Information</div>
+                                <div class="option option3" id="option3" onClick="getHostel_info();">Hostel Detail</div>
                             </div>
                             <div id="personal_info">
                                 <div class="contain"> </div>
@@ -50,12 +50,18 @@
     <script type="text/javascript">
         
     
-       
-        // getHostel_info();
-        // getHostel_info();
         var id= <?php echo json_encode($_SESSION['id']); ?>;
+
+        var option1=document.getElementById('option1');
+        var option2=document.getElementById('option2');
+        var option3= document.getElementById('option3');
+            
+
         function getprofile()
         {
+            option1.classList.add("option-select"); 
+            option2.classList.remove("option-select");     
+            option3.classList.remove("option-select");  
 
             console.log(id);
             $.ajax({
@@ -73,6 +79,11 @@
         }  
         getprofile();
         function getEducation(){
+            option2.classList.add("option-select"); 
+            option1.classList.remove("option-select");     
+            option3.classList.remove("option-select");  
+
+
             $.ajax({
                 type:"POST",
                 url:"../ajax/getEducation.php",
@@ -88,6 +99,11 @@
         } 
 
         function getHostel_info(){
+
+            option3.classList.add("option-select"); 
+            option2.classList.remove("option-select");     
+            option1.classList.remove("option-select");  
+
             $.ajax({
                 type:"POST",
                 url:"../ajax/getHostel_info.php",

@@ -41,11 +41,16 @@ td{
     background-color: rgb(192, 192, 252);
 }
 
-.option1:hover , .option2:hover , .option3:hover{
+/* .option1:hover , .option2:hover , .option3:hover{
     
     border-radius: 48px;
     background-color: #d8ddf2;
     font-weight: 700;
     
 
+} */
+.option-select{
+    background-color: #d8ddf2;
+    border-radius: 48px;
+    font-weight: 700;
 }
