@@ -32,3 +32,8 @@ th
 td{
     background-color:#cd84bffc;
 }
+#personal_info{
+    width: 500px !important;
+    height: 500px !important;
+    background-color: red;
+}
