@@ -9,11 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/profile.css">
     <link rel="stylesheet" href="../css/home.css">
-  <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
-  <link rel="stylesheet" href="../bootstrap/normalize.min.css">
-  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap/normalize.min.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="https://tse2.mm.bing.net/th?id=OIP.TRLdZgnfAkaU15U8ICMdZAHaGG&pid=Api&P=0&w=194&h=161" type="image/x-icon">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Banasthali Portal</title>
 </head>
 <body>
     <?php include('navbar.php');?>
@@ -29,9 +31,9 @@
                         <div class="contain">
                             
                             <div class="info-option">
-                                <div class="option"onClick="getprofile();">Personal Information</div>
-                                <div class="option"  onClick="getEducation();" >Educational Information</div>
-                                <div class="option"onClick="getHostel_info();">Hostel Detail</div>
+                                <div class="option option1" onClick="getprofile();">Personal Information</div>
+                                <div class="option option2"  onClick="getEducation();" >Educational Information</div>
+                                <div class="option option3" onClick="getHostel_info();">Hostel Detail</div>
                             </div>
                             <div id="personal_info">
                                 <div class="contain"> emdkff ifurrurrffr</div>

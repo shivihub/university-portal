@@ -1,11 +1,15 @@
 .info-option{
     margin:20px 0px!important;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-evenly;
+    background-color: #d8ddf2;
+    border-radius: 48px;
 }
 .option{
-    padding: 15px !important;
+    margin: 10px !important;
+    padding: 10px !important;
     font-size: 1.3em !important;
+    cursor: pointer !important;
 }
 
 th,td{
@@ -36,4 +40,9 @@ td{
     width: 500px !important;
     height: 500px !important;
     background-color: red;
+}
+.option1:hover , .option2:hover , .option3:hover{
+    background-color: white;
+    color: rgb(155, 155, 245);
+    border-radius: 48px;
 }
