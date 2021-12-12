@@ -4,9 +4,9 @@
     $query = $db->prepare('SELECT * FROM courses_of_ece WHERE semester=? ');
     $data=array($option);
     $query->execute($data);
-    while($datarow=$query->fetch()){
-        echo $datarow['course_name']." ";
-    }
+    // while($datarow=$query->fetch()){
+    //     echo $datarow['course_name']." ";
+    // }
 ?>
 
 

@@ -32,8 +32,20 @@
                     $EMAIL=$worksheet->getCellByColumnAndRow(10,$row)->getValue();
                     $PASS=$worksheet->getCellByColumnAndRow(11,$row)->getValue();
                     $ID=$worksheet->getCellByColumnAndRow(12,$row)->getValue();
-                    $query = $db->prepare('INSERT INTO student(uname,DOB,gender,native_language,blood_group,physically_challenged,religion,caste,nationality,aadhar_number,email,pass,id) Values (?,?,?,?,?,?,?,?,?,?,?,?,?)');
-                    $data = array($NAME,$DOB,$GENDER, $NATIVELANGUAGE, $BLOODGROUP,$PHYSICALLYCHALLENGED, $CASTE,$RELIGION,$NATIONALITY, $AADHARNUMBER, $EMAIL,$PASS, $ID);
+                    $enroll_no=$worksheet->getCellByColumnAndRow(13,$row)->getValue();
+                    $banasthali_id=$worksheet->getCellByColumnAndRow(14,$row)->getValue();
+                    $program=$worksheet->getCellByColumnAndRow(15,$row)->getValue();
+                    $branch=$worksheet->getCellByColumnAndRow(16,$row)->getValue();
+                    $street_name=$worksheet->getCellByColumnAndRow(17,$row)->getValue();
+                    $city=$worksheet->getCellByColumnAndRow(18,$row)->getValue();
+                    $state=$worksheet->getCellByColumnAndRow(19,$row)->getValue();
+                    $country=$worksheet->getCellByColumnAndRow(20,$row)->getValue();
+                    $pin_code=$worksheet->getCellByColumnAndRow(21,$row)->getValue();
+                    $mobile_no=$worksheet->getCellByColumnAndRow(22,$row)->getValue();
+                    $parent_mobile_no=$worksheet->getCellByColumnAndRow(23,$row)->getValue();
+         
+                    $query = $db->prepare('INSERT INTO student(student_name,DOB,gender,native_language,blood_group,physically_challenged,religion,caste,nationality,aadhar_number,email,pass,id,enrollment_no,banasthali_id,program,branch,street_name,city,states,country,pin_code,mobile_no,parent_mobile_no) Values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
+                    $data = array                              ($NAME,$DOB,$GENDER, $NATIVELANGUAGE, $BLOODGROUP,$PHYSICALLYCHALLENGED, $RELIGION,$CASTE,$NATIONALITY, $AADHARNUMBER, $EMAIL,$PASS, $ID,$enroll_no,$banasthali_id,$program,$branch,$street_name,$city,$state, $country, $pin_code,$mobile_no, $parent_mobile_no);
                     $execute=$query->execute($data);
                     if($execute)
                     {

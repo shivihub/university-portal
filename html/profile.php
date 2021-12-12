@@ -30,13 +30,14 @@
                             <!-- <a href="#1a" style="margin-right:20px!important;">Personal Information</a>
                             <a  href="#2a" style="margin-right:20px!important;">Educational Information</a>
                             <a  href="#3a" style="margin-right:20px!important;">Hostel Detail</a> -->
-                            <div class="option">Personal Information</div>
-                            <div class="option">Educational Information</div>
-                            <div class="option">Hostel Detail</div>
+                            <div class="option" >Personal Information</div>
+                            <div class="option"  onClick="getEducation();" >Educational Information</div>
+                            <div class="option"onClick="getHostel_info();">Hostel Detail</div>
                         </div>
                     <!-- table1 -->
+                        <div id="personal_info option1" > 
                         <div>
-                            <table >
+                            <!-- <table >
                                 <tr>
                                     <th colspan="2" class="table-heading">Personal Information</th>
                                 </tr>
@@ -81,11 +82,11 @@
                                     <td id="aadhar">xxxxxxxxxxx</td>
                                 </tr>
                                
-                            </table>
+                            </table> -->
                         </div>
                         <!-- table  2    -->
-                        <diV>
-                            <table>
+                        <div>
+                            <!-- <table>
                              <tr>
                                     <th colspan="2" class="table-heading">College Information</th>
                                 </tr>
@@ -106,11 +107,11 @@
                                     <td>ELectronics and Communication</td>
                                 </tr>
                                 
-                            </table>
-                        </diV>
+                            </table> -->
+                        </div>
                         <!-- table 3     -->
                         <div>
-                            <table>
+                            <!-- <table>
                                 <tr>
                                     <th colspan="2" class="table-heading">Current Address</th>
                                 </tr>
@@ -146,8 +147,9 @@
                                     <th>Friend Mobile Number</th>
                                     <td>XXXXXXXXXX</td>
                                 </tr>
-                            </table>
+                            </table> -->
                         </div>
+                    </div>
                     </div>
 
                     <div class="col-sm-2" ></div>       
@@ -155,24 +157,132 @@
             </div>
         </div>
     </div>
+    
+
+    <div id="option2">
+        
+    </div>
+    <div id="option3>
+
+    </div>
+
+    <!-- <script type="text/javascript">
+        function showprofile()
+        {
+            signupform.style.display = "block";
+            loginform.style.display = "none";
+            signbtn.classList.toggle("active"); 
+            logbtn.classList.toggle("active");     
+            
+        } 
+        function showsignup()
+        {
+            signupform.style.display = "block";
+            loginform.style.display = "none";
+            signbtn.classList.toggle("active"); 
+            logbtn.classList.toggle("active");     
+            
+        } 
+        function showsignup()
+        {
+            signupform.style.display = "block";
+            loginform.style.display = "none";
+            signbtn.classList.toggle("active"); 
+            logbtn.classList.toggle("active");     
+            
+        } 
+
+    </script> -->
+
+
+
 
     <script type="text/javascript">
-        getprofile();
+      getprofile();
         function getprofile()
         {
-            var id= <?php echo $_SESSION['id']; ?>;
+            var option1=document.getElementById('option1');
+            var option2=document.getElementById('option2');
+            var option3 =document.getElementById('option3');
+            var id= <?php echo json_encode($_SESSION['id']); ?>;
+            option1.style.display = "block";
+            option2.style.display = "none";
+            option3.style.display = "none";
+            option1.classList.toggle("option"); 
+            option2.classList.toggle("option");
+            option3.classList.toggle("option");
+                
            
+            
             $.ajax({
                 type:"POST",
                 url:"../ajax/getprofile.php",
                 data: {id:id},
                 success: function(data){
-                        alert (data);
+                     $('#personal_info').html(data);
 
                 }
             });
         }
+
+        // getEducation
+        function getEducation()
+        {
+           
+             var id= <?php echo json_encode($_SESSION['id']); ?>;
+             var option1=document.getElementById('option1');
+            var option2=document.getElementById('option2');
+            var option3 =document.getElementById('option3');
+            
+            option2.style.display = "block";
+            option1.style.display = "none";
+            option3.style.display = "none";
+            option1.classList.toggle("option"); 
+            option2.classList.toggle("option");
+            option3.classList.toggle("option");
+             console.log("education");
+           
+            
+            // $.ajax({
+            //     type:"POST",
+            //     url:"../ajax/getEducation.php",
+            //     data: {id:id},
+            //     success: function(data){
+            //          $('#personal_info').html(data);
+
+            //     }
+            // });
+        }
+        // gethostel infomation
+        function getHostel_info()
+        {
+           
+            var id= <?php echo json_encode($_SESSION['id']); ?>;
+            var option1=document.getElementById('option1');
+            var option2=document.getElementById('option2');
+            var option3 =document.getElementById('option3');
+            
+            option3.style.display = "block";
+            option2.style.display ="none";
+            option1.style.display ="none";
+            option1.classList.toggle("option"); 
+            option2.classList.toggle("option");
+            option3.classList.toggle("option");
+             console.log("education");
+           
+            
+            // $.ajax({
+            //     type:"POST",
+            //     url:"../ajax/getHostel.php",
+            //     data: {id:id},
+            //     success: function(data){
+            //          $('#personal_info').html(data);
+
+            //     }
+            // });
+        }
     </script>
+
 
 </body>
 </html>
