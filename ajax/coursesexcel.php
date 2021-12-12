@@ -10,7 +10,7 @@
         $extension=$file_array[1];
         if($extension == "xls" || $extension =="xlsx" || $extension == "csv")
         {
-            echo "file type accepted";
+            echo "file type accepted ";
             $uploadFilePath = '../uploads/'.basename($_FILES["excel_file"]["name"]);
             move_uploaded_file($_FILES["excel_file"]["tmp_name"], $uploadFilePath);
             $filename= $_FILES["excel_file"]["name"];
@@ -32,7 +32,7 @@
                     $EMAIL=$worksheet->getCellByColumnAndRow(10,$row)->getValue();
                     $PASS=$worksheet->getCellByColumnAndRow(11,$row)->getValue();
                     $ID=$worksheet->getCellByColumnAndRow(12,$row)->getValue();
-                    $query = $db->prepare('INSERT INTO student(uname,DOB,gender,native_language,blood_group,physically_challenged,religion,caste,nationality,aadhar_number,email,pass,id) Values (?,?,?,?,?,?,?,?,?,?,?,?,?)');
+                    $query = $db->prepare('INSERT INTO student(student_name,DOB,gender,native_language,blood_group,physically_challenged,religion,caste,nationality,aadhar_number,email,pass,id) Values (?,?,?,?,?,?,?,?,?,?,?,?,?)');
                     $data = array($NAME,$DOB,$GENDER, $NATIVELANGUAGE, $BLOODGROUP,$PHYSICALLYCHALLENGED, $CASTE,$RELIGION,$NATIONALITY, $AADHARNUMBER, $EMAIL,$PASS, $ID);
                     $execute=$query->execute($data);
                     if($execute)

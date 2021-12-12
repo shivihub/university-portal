@@ -96,9 +96,6 @@
         {
             signupform.style.display = "block";
             loginform.style.display = "none";
-            // logbtn.classList.remove("active");
-            // logbtn.classList.add("non-active");
-            // signbtn.classList.add("active");
             signbtn.classList.toggle("active"); 
             logbtn.classList.toggle("active");     
             
