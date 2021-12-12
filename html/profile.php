@@ -30,11 +30,11 @@
                             
                             <div class="info-option">
                                 <div class="option"onClick="getprofile();">Personal Information</div>
-                                <div class="option"  onClick="getEducation();" >Educational Information</div>
+                                <div class="option"onClick="getEducation();" >Educational Information</div>
                                 <div class="option"onClick="getHostel_info();">Hostel Detail</div>
                             </div>
                             <div id="personal_info">
-                                <div class="contain"> emdkff ifurrurrffr</div>
+                                <div class="contain"> </div>
                             </div>
                         </div>
                     </div>          
@@ -52,33 +52,51 @@
         var id= <?php echo json_encode($_SESSION['id']); ?>;
         function getprofile()
         {
-            document.getElementById('personal_info').HTML
-            document.getElementById('personal_info').HTML= "profile";
-            console.log("profile");
             
-            // $.ajax({
-            //     type:"POST",
-            //     url:"../ajax/getprofile.php",
-            //     data: {id:id},
-            //     success: function(data){
-            //          $('#personal_info').html(data);
-            //         console.log(data);
+            $.ajax({
+                type:"POST",
+                url:"../ajax/getprofile.php",
+                data: {id:id},
+                success: function(data){
+                     $('#personal_info').html(data);
+                    console.log(data);
                      
 
-            //     }
-            // });
+                }
+            });
         }  
 
         function getEducation(){
-            document.getElementById('personal_info').HTML= "education";
-            console.log("edu");
+            $.ajax({
+                type:"POST",
+                url:"../ajax/getEducation.php",
+                data: {id:id},
+                success: function(data){
+                     $('#personal_info').html(data);
+                    console.log(data);
+                     
+
+                }
+            });
+            
         } 
 
         function getHostel_info(){
-            document.getElementById('personal_info').HTML= "hostel";
-            console.log("hostel");
+            $.ajax({
+                type:"POST",
+                url:"../ajax/getHostel_info.php",
+                data: {id:id},
+                success: function(data){
+                     $('#personal_info').html(data);
+                    console.log(data);
+                     
+
+                }
+            });
+            
         }
     </script>
+    
 
 
 </body>
