@@ -13,7 +13,9 @@
     <link rel="stylesheet" href="../bootstrap/normalize.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-    <title>HOME PAGE</title>
+    <link rel="shortcut icon" href="https://tse2.mm.bing.net/th?id=OIP.TRLdZgnfAkaU15U8ICMdZAHaGG&pid=Api&P=0&w=194&h=161" type="image/x-icon">
+    
+    <title>Banasthali Portal</title>
 </head>
 <body>
     <!-- navbar ------->
