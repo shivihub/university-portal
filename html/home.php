@@ -22,10 +22,10 @@
     
     <div class="col-sm-12">
         <div class="contain">
-            <div class="col-sm-2">
+            <div class="col-sm-1">
                 <?php include("./sidebar.php")?>
             </div>
-            <div class="col-sm-10" >
+            <div class="col-sm-11" >
                 <div class="contain">
                     
                 </div>
