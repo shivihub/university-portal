@@ -16,7 +16,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 23px ;
-    font-family: Georgia, 'Times New Roman', Times, serif
+    font-family: Arial, Helvetica, sans-serif;
 }
 #ham-burger{
     cursor: pointer;
@@ -34,6 +34,7 @@
     line-height: 44px;
     font-size: 1.2em;
     text-align: center;
+    transition: all 0.5s ease;
 
 
 }
@@ -51,9 +52,15 @@
 .sidebar ul li a span{
     display: none;
 }
-.active{
-    width: 240px;
 
+.sidebar.open{
+    width: 240px;
+}
+.sidebar.open span{
+    display: inline;
+}
+.sidebar.open ul li {
+    text-align: left;
 }
 
 
