@@ -19,23 +19,29 @@
              foreach($object->getWorksheetIterator() as $worksheet){
                  $rowcount = $worksheet->getHighestRow();
                  for($row=2; $row<=$rowcount;$row++){
-                    $NAME=$worksheet->getCellByColumnAndRow(0,$row)->getValue();
-                    $DOB=$worksheet->getCellByColumnAndRow(1,$row)->getValue();
-                    $GENDER=$worksheet->getCellByColumnAndRow(2,$row)->getValue();
-                    $NATIVELANGUAGE=$worksheet->getCellByColumnAndRow(3,$row)->getValue();
-                    $BLOODGROUP=$worksheet->getCellByColumnAndRow(4,$row)->getValue();
-                    $PHYSICALLYCHALLENGED=$worksheet->getCellByColumnAndRow(5,$row)->getValue();
-                    $CASTE=$worksheet->getCellByColumnAndRow(6,$row)->getValue();
-                    $RELIGION=$worksheet->getCellByColumnAndRow(7,$row)->getValue();
-                    $NATIONALITY=$worksheet->getCellByColumnAndRow(8,$row)->getValue();
-                    $AADHARNUMBER=$worksheet->getCellByColumnAndRow(9,$row)->getValue();
-                    $EMAIL=$worksheet->getCellByColumnAndRow(10,$row)->getValue();
-                    $PASS=$worksheet->getCellByColumnAndRow(11,$row)->getValue();
-                    $ID=$worksheet->getCellByColumnAndRow(12,$row)->getValue();
-                   
+                    $id=$worksheet->getCellByColumnAndRow(0,$row)->getValue();
+                    $applied_degree=$worksheet->getCellByColumnAndRow(1,$row)->getValue();
+                    $educational_qualification=$worksheet->getCellByColumnAndRow(2,$row)->getValue();
+                    $branch=$worksheet->getCellByColumnAndRow(3,$row)->getValue();
+                    $school_name=$worksheet->getCellByColumnAndRow(4,$row)->getValue();
+                    $medium=$worksheet->getCellByColumnAndRow(5,$row)->getValue();
+                    $board=$worksheet->getCellByColumnAndRow(6,$row)->getValue();
+                    $registration_no=$worksheet->getCellByColumnAndRow(7,$row)->getValue();
+                    $class_obtained=$worksheet->getCellByColumnAndRow(8,$row)->getValue();
+                    $year_of_passing=$worksheet->getCellByColumnAndRow(9,$row)->getValue();
+                    $month_of_passing=$worksheet->getCellByColumnAndRow(10,$row)->getValue();
+                    $area_name=$worksheet->getCellByColumnAndRow(11,$row)->getValue();
+                    $city=$worksheet->getCellByColumnAndRow(12,$row)->getValue();
+                    $states=$worksheet->getCellByColumnAndRow(13,$row)->getValue();
+                    $pincode=$worksheet->getCellByColumnAndRow(14,$row)->getValue();
+                    $phone_no=$worksheet->getCellByColumnAndRow(15,$row)->getValue();
+                    $break_in_study=$worksheet->getCellByColumnAndRow(16,$row)->getValue();
+                    $reason=$worksheet->getCellByColumnAndRow(17,$row)->getValue();
+                    $hostel_name=$worksheet->getCellByColumnAndRow(18,$row)->getValue();
+                    $room_no=$worksheet->getCellByColumnAndRow(19,$row)->getValue();
          
-                    $query = $db->prepare('INSERT INTO student(student_name,DOB,gender,native_language,blood_group,physically_challenged,religion,caste,nationality,aadhar_number,email,pass,id,enrollment_no,banasthali_id,program,branch,street_name,city,states,country,pin_code,mobile_no,parent_mobile_no) Values ()');
-                    $data = array                              ($NAME,$DOB,$GENDER, $NATIVELANGUAGE, $BLOODGROUP,$PHYSICALLYCHALLENGED, $RELIGION,$CASTE,$NATIONALITY, $AADHARNUMBER, $EMAIL,$PASS, $ID,$enroll_no,$banasthali_id,$program,$branch,$street_name,$city,$state, $country, $pin_code,$mobile_no, $parent_mobile_no);
+                    $query = $db->prepare('INSERT INTO edu_hostel_info(id,applied_degree,educational_qualification,branch,school_name,medium,board,registration_no,class_obtained,year_of_passing,month_of_passing,area_name,city,states,pincode,phone_no,break_in_study,reason,hostel_name,room_no) Values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
+                    $data = array ($id,$applied_degree,$educational_qualification,$branch,$school_name,$medium,$board, $registration_no,$class_obtained,$year_of_passing,$month_of_passing,$area_name,$city,$states,$pincode,$phone_no,$break_in_study,$reason,$hostel_name,$room_no);
                     $execute=$query->execute($data);
                     if($execute)
                     {

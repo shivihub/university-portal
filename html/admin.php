@@ -36,7 +36,7 @@
             $.ajax(
                 {
                 type:"POST",
-                url:"../ajax/coursesexcel.php",
+                url:"../ajax/edu_excel.php",
                 contentType:false,
                 processData:false,
                 data:data,
