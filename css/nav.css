@@ -19,19 +19,7 @@
 .sidebar.open{
   width: 250px;
 }
-.sidebar .logo-details{
-  height: 60px;
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-.sidebar .logo-details .icon{
-  opacity: 0;
-  transition: all 0.5s ease;
-}
-.sidebar.open .logo-details .icon{
-  opacity: 1;
-}
+
 .sidebar .logo-details #btn{
   position: absolute;
   top: 50%;
