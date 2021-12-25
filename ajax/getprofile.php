@@ -52,7 +52,7 @@
             </tr>
             <tr>
                 <th>Nationality</th>
-                <td id="nationality" style="font-weight:700;"><?php echo $datarow['nationality'];?></td>
+                <td id="nationality" style="font-weight:700; text-trans form:uppercase;"><?php echo $datarow['nationality'];?></td>
             </tr>
             <tr>
                 <th>Aadhar Number</th>

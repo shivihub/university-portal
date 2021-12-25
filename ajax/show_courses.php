@@ -27,7 +27,7 @@
         
     <tr>
         <td style="text-align:left;"><?php echo $datarow['course_name'] ?></td>
-        <td>O</td>
+        <td><?php echo $datarow['credit_points'] ?></td>
         <td>A</td>
         <td>GOOD</td>
     </tr>

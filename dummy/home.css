@@ -34,7 +34,7 @@
     line-height: 44px;
     font-size: 1.2em;
     text-align: center;
-    transition: all 0.7s ease;
+    /* transition: all 0.7s ease; */
 
 
 }
@@ -58,7 +58,7 @@
     width: 240px;
 }
 .sidebar.open span{
-    display: inline;
+    display:inline-block;
 }
 .sidebar.open ul li {
     text-align: left;
