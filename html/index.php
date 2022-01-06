@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/index.css">
     <link rel="shortcut icon" href="https://tse2.mm.bing.net/th?id=OIP.TRLdZgnfAkaU15U8ICMdZAHaGG&pid=Api&P=0&w=194&h=161" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
     <title>Banasthali Portal</title>
 </head>
 <body>
@@ -48,7 +49,7 @@
                         <label >CONFIRM PASSWORD: <span style="color:red">*</span></label>
                         <input type="password" id="cpass" name="cpass" placeholder="Enter confirm password" class="form-control" required>
                         <div class="btn2">
-                        <input type="submit" id="submit1" name="submit1"   onclick="submitdata();" class="submit">      
+                        <input type="submit" id="submit1" name="submit1" onclick="submitdata();" class="submit">      
                         </div>  
 
                     </form>
@@ -100,7 +101,7 @@
             signbtn.classList.toggle("active"); 
             logbtn.classList.toggle("active");     
             
-        }  
+        }   
     </script>
     <script type="text/javascript">
    

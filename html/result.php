@@ -141,6 +141,7 @@
     </div>
     <script>
         function update() {
+                var id= <?php echo json_encode($_SESSION['id']); ?>;
 				var select = document.getElementById('sem_option');
 				var option = select.options[select.selectedIndex].value;
                 if(option!=0)
@@ -148,7 +149,7 @@
                     $.ajax({
                         type:"POST",
                         url:"../ajax/show_courses.php",
-                        data: {option:option},
+                        data: {option:option,id:id},
                         success: function(data){
                             $('#data-list').html(data);
                             

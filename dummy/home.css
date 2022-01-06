@@ -1,16 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
 
-
-
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
-
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-body{
+body {
   min-height: 100vh;
   background: #fff;
 }
@@ -27,10 +23,10 @@ body{
   transition: width 0.5s;
   overflow-x: hidden;
 }
-.navigation.active{
+.navigation.active {
   width: 300px;
 }
-.navigation ul{
+.navigation ul {
   position: absolute;
   top: 0;
   left: 0;
@@ -58,7 +54,7 @@ body{
   display: none;
 }
 .navigation ul li b:nth-child(1)::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -67,19 +63,6 @@ body{
   border-bottom-right-radius: 20px;
   background: #4d5bf9;
 }
-<<<<<<< HEAD
-.sidebar{
-    width:70px;
-    height: calc(100vh - 60px);
-    background-color: rgb(22, 70, 158);
-    position: fixed;
-    line-height: 44px;
-    font-size: 1.2em;
-    text-align: center;
-    /* transition: all 0.7s ease; */
-
-
-=======
 .navigation ul li b:nth-child(2) {
   position: absolute;
   bottom: -20px;
@@ -87,10 +70,9 @@ body{
   width: 100%;
   background: #fff;
   display: none;
->>>>>>> 2954426099c8c272590bf85ddd0227c390f8a1d0
 }
 .navigation ul li b:nth-child(2)::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -111,26 +93,21 @@ body{
   text-decoration: none;
   color: #fff;
 }
-.navigation ul li.active a{
+.navigation ul li.active a {
   color: #333;
 }
-<<<<<<< HEAD
-.sidebar.open span{
-    display:inline-block;
-=======
-.navigation ul li a .icon{
+.navigation ul li a .icon {
   position: relative;
   display: block;
   min-width: 60px;
   height: 60px;
   line-height: 70px;
   text-align: center;
->>>>>>> 2954426099c8c272590bf85ddd0227c390f8a1d0
 }
-.navigation ul li a .icon ion-icon{
+.navigation ul li a .icon ion-icon {
   font-size: 1.5em;
 }
-.navigation ul li a .title{
+.navigation ul li a .title {
   position: relative;
   display: block;
   padding-left: 10px;
@@ -138,7 +115,7 @@ body{
   line-height: 60px;
   white-space: normal;
 }
-.toggle{
+.toggle {
   position: fixed;
   top: 20px;
   right: 20px;
@@ -151,20 +128,20 @@ body{
   justify-content: center;
   align-items: center;
 }
-.toggle.active{
+.toggle.active {
   background: #ff4d89;
 }
-.toggle ion-icon{
+.toggle ion-icon {
   position: absolute;
   color: #fff;
   font-size: 34px;
-  display:none;
+  display: none;
 }
 .toggle ion-icon.open,
-.toggle.active ion-icon.close{
-  display:block;
+.toggle.active ion-icon.close {
+  display: block;
 }
 .toggle ion-icon.close,
-.toggle.active ion-icon.open{
-  display:none;
+.toggle.active ion-icon.open {
+  display: none;
 }

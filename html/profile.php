@@ -32,12 +32,12 @@
                             
                             <div class="info-option">
                                 <div class="option option1 " id="option1" onClick="getprofile();">Personal Information</div>
-                                <div class="option option2" id="option2" onClick="getEducation();" >Educational Information</div>
-                                <div class="option option3" id="option3" onClick="getHostel_info();">Hostel Detail</div>
+                                <div class="option option2" id="option2"  onClick="getEducation();" >Educational Information</div>
+                                <div class="option option3" id="option3"  onClick="getHostel_info();">Hostel Detail</div>
                             </div>
                             <div id="personal_info">
                                 <div class="contain"> </div>
-                            </div>
+                            </div> 
                         </div>
                     </div>          
                     <div class="col-sm-2" ></div>           
