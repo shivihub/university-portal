@@ -25,7 +25,7 @@
                     $ssid=$worksheet->getCellByColumnAndRow(0,$row)->getValue();
                     $marks=$worksheet->getCellByColumnAndRow(1,$row)->getValue();
                     $course_code=$option_course;
-                    $query = $db->prepare('INSERT INTO result(sid,marks,course_code) Values (?,?.?)');
+                    $query = $db->prepare('INSERT INTO result(sid,marks,course_code) Values (?,?,?)');
                     $data = array($ssid,$marks,$course_code);
                     $execute=$query->execute($data);
                     if($execute)

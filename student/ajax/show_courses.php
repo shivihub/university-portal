@@ -6,9 +6,6 @@
     $query = $db->prepare('SELECT * FROM courses_of_ece WHERE semester=? ');
     $data=array($option);
     $query->execute($data);
-    $query1 = $db->prepare('SELECT * FROM marks WHERE id=? ');
-    $data1=array($option);
-    $query1->execute($data1);
     
 ?>
 
@@ -23,17 +20,13 @@
                 <th>Remarks</th>
             </tr>
     <?php
-    $datarow1=$query1->fetch();
     while($datarow=$query->fetch()){
-        $var=$datarow['course_name'];
-        // $courses[$count]= $datarow['course_name'];
-        // echo $courses[$count]." ";
     ?> 
         
     <tr>
         <td style="text-align:left;"><?php echo $datarow['course_name'] ?></td>
         <td><?php echo $datarow['credit_points'] ?></td>
-        <td><?php echo $datarow1['$var']?></td>
+        <td>A</td>
         <td>GOOD</td>
     </tr>
                             

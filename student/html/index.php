@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="../bootstrap/normalize.min.css">
+    <link rel="stylesheet" href="../../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../bootstrap/normalize.min.css">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="shortcut icon" href="https://tse2.mm.bing.net/th?id=OIP.TRLdZgnfAkaU15U8ICMdZAHaGG&pid=Api&P=0&w=194&h=161" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -65,7 +65,6 @@
                         <div class="btn2">
                         <input type="submit" id="submit" name="submit" onclick="getdata();" class="submit"   >      
                         </div>  
-
                     </form>
                 </div>
             
@@ -88,9 +87,6 @@
         {
             signupform.style.display = "none";
             loginform.style.display = "block";
-            // signbtn.classList.remove("active");
-            // signbtn.classList.add("non-active");
-            // logbtn.classList.add("active");
             logbtn.classList.toggle("active");   
             signbtn.classList.toggle("active");          
         }  
@@ -111,11 +107,14 @@
         var email1=document.getElementById('email1').value;
         var password1=document.getElementById('password1').value
         var cpass=document.getElementById('cpass').value;
-       if(password1!=cpass)
-       {
-           alert ("password don't match");
-       }
-       
+        if(password1!=cpass)
+        {
+            alert ("password don't match");
+        }
+        else if(uname==NULL || email1== NULL || password1==NULL || cpass==NULL)
+        {
+            alert("Fill all the fields first");
+        }
         else
         {
 
@@ -124,12 +123,11 @@
                 url:"../ajax/insert.php",
                 data: {uname:uname,email1:email1,password1:password1},
                 success: function(data){
-                    // alert(data);
                     if(data==0){
                         alert ("Sign Up succeed");
                         alert("Now Login to continue");
-                        // window.location.reload();
-                        window.location.href="./index.php";}
+                        window.location.href="./index.php";
+                    }
                     if (data==1)
                         alert ("incorrect  password ");
 
@@ -168,16 +166,5 @@
             e.preventDefault();
         });
         </script>
-    
-    
-
-    
-  
-
-        
-
-
-
-
 </body>
 </html>
