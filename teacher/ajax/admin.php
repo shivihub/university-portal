@@ -16,22 +16,24 @@
         <div class="col-sm-4">
             <div class="contain">
                 <div style="margin:10px !important; font-weight:700; font-size:2em; ">Select Subject</div>
-                <div style="margin:20px; !important">
-                    <select id="courses" name="course" onChange="update();">
-                        <option value="0">select</option>
-                        <option value="bio101">Biology</option>
-                        <option value="math103">Calculus</option>
-                        <option value="bvf014">General Hindi</option>
-                        <option value="bvf011">General English</option>
-                        <option value="ece202s">Seminar</option>
-                        <option value="chem101">Chemistry</option>
-                    </select>
-                </div>
+                
                 <div style="margin:20px; !important">
                     <form id="excel_form">
+                        <div style="margin:20px; !important" id="getCourseCode"> 
+                            <select id="courses" name="course" >
+                                <option value="0">select</option>
+                                <option value="bio101">Biology</option>
+                                <option value="math103">Calculus</option>
+                                <option value="bvf014">General Hindi</option>
+                                <option value="bvf011">General English</option>
+                                <option value="ece202s">Seminar</option>
+                                <option value="chem101">Chemistry</option>
+                            </select>
+                        </div>
                         <div>
                         <input type="file" name="excel_file" id="excel_file">
                         </div>
+                        
                         <div>
                         <input type="submit" name="submit" onclick="send();" > 
                         </div>
@@ -43,7 +45,9 @@
         <div class="col-sm-4"></div>
         </div>
     </div>
-    <script type="text/javascript">
+
+    
+    <!-- <script type="text/javascript">
         function update() {
             
             var select_course = document.getElementById('courses');
@@ -55,17 +59,17 @@
                     url:"../../student/ajax/result_excel.php",
                     data: {option_course:option_course},
                     success: function(data){
-                        console.log(data);
+                        alert(data);
                     }
                 });
             }   
         }
-    </script>
+    </script> -->
     <script type="text/javascript">
         function send(){
-            update();
             var excel_form=document.getElementById('excel_form');
             var data=new FormData(excel_form); 
+            
             $.ajax(
                 {
                 type:"POST",
@@ -80,8 +84,9 @@
             });
 
         }
-    </script>
+    
 
+        </script>
     <script type="text/javascript">
         $('form').submit(function(e) {
         e.preventDefault();

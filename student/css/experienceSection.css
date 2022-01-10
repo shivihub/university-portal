@@ -1,0 +1,49 @@
+.body{
+    margin-top: 122px !important;
+    width: 94%;
+    /* text-align: center; */
+    min-height: 500px;
+    
+}
+.heading-exp{
+    margin-bottom: 30px !important;
+    font-weight: bold;
+    text-align: center;
+    font-size: 31px;
+    color: #0e547c;
+
+}
+.main{
+    /* background-color: rgb(191, 217, 240); */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 500px;
+}
+.experience-block{
+    width: 80%;
+    background-color: rgb(255, 255, 255);
+    margin: 1.5% 0px !important;
+    box-shadow: 1px 1px 10px 0px rgb(148, 147, 147) , -1px -1px 10px 0px rgb(148, 147, 147) ;
+
+}
+.blog-title{
+    padding: 0px 15px !important;
+    padding-top: 23px !important;
+
+}
+.blog-content{
+    /* text-overflow: ellipsis;
+    word-break: break-all;
+    overflow: hidden; 
+    white-space: nowrap; */
+    /* background-color: rgb(226, 124, 218); */
+    text-align:left ;
+    color: gray;
+    min-height: 60px;
+    padding: 20px 15px !important;
+}
+.blog-content a{
+    color:rgb(33, 103, 160);
+    font-size:1.1em;
+}

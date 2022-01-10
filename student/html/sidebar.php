@@ -1,11 +1,5 @@
 <div class="contain sidebar">
     <ul>
-        <!-- <li style="text-align:right !important;">
-            <a href="#">
-                <i  class="bx bx-menu hamburger"> </i>             
-            </a>
-        </li> -->
-
         <li style="margin-top:30px !important;">
             <a href="#">
                 <i class='bx bx-home' type="solid"></i>
@@ -64,7 +58,7 @@
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="./experienceSection.php">
                 <i class="bx bx-pencil"></i>
                 <!-- <span> Experience Section</span>   -->
             </a>
