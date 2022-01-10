@@ -17,7 +17,7 @@
             <div class="contain">
                 <div style="margin:10px !important; font-weight:700; font-size:2em; ">Select Subject</div>
                 <div style="margin:20px; !important">
-                    <select id="courses" name="select" onChange="update();">
+                    <select id="courses" name="course" onChange="update();">
                         <option value="0">select</option>
                         <option value="bio">Biology</option>
                         <option value="math103">Math</option>
@@ -52,7 +52,7 @@
             {
                 $.ajax({
                     type:"POST",
-                    url:"../ajax/result_excel.php",
+                    url:"../../student/ajax/result_excel.php",
                     data: {option_course:option_course},
                     success: function(data){
                         console.log(data);
@@ -68,7 +68,7 @@
             $.ajax(
                 {
                 type:"POST",
-                url:"../ajax/result_excel.php",
+                url:"../../student/ajax/result_excel.php",
                 contentType:false,
                 processData:false,
                 data:data,
