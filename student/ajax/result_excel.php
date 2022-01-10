@@ -2,8 +2,8 @@
 <?php
     include('../Classes/PHPExcel.php');
     include("connection.php");
-    $option_course=$_POST['option_course'];
-    echo $option_course;
+    // $option_course=$_POST['option_course'];
+    // echo $option_course;
     if(!empty($_FILES["excel_file"]))
     {
        
@@ -14,7 +14,7 @@
         if($extension == "xls" || $extension =="xlsx" || $extension == "csv")
         {
             echo "file type accepted";
-            $uploadFilePath = '../uploads/'.basename($_FILES["excel_file"]["name"]);
+            $uploadFilePath = '../../uploads/'.basename($_FILES["excel_file"]["name"]);
             move_uploaded_file($_FILES["excel_file"]["tmp_name"], $uploadFilePath);
             $filename= $_FILES["excel_file"]["name"];
             echo $filename;
@@ -24,7 +24,7 @@
                  for($row=2; $row<=$rowcount;$row++){
                     $ssid=$worksheet->getCellByColumnAndRow(0,$row)->getValue();
                     $marks=$worksheet->getCellByColumnAndRow(1,$row)->getValue();
-                    $course_code=$option_course;
+                    $course_code='math103';
                     $query = $db->prepare('INSERT INTO result(sid,marks,course_code) Values (?,?,?)');
                     $data = array($ssid,$marks,$course_code);
                     $execute=$query->execute($data);

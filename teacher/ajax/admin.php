@@ -19,12 +19,12 @@
                 <div style="margin:20px; !important">
                     <select id="courses" name="select" onChange="update();">
                         <option value="0">select</option>
-                        <option value="bio">Biology</option>
-                        <option value="math103">Math</option>
-                        <option value="general_Hindi">General Hindi</option>
-                        <option value="general_English">General English</option>
-                        <option value="seminar">Seminar</option>
-                        <option value="chemistry">Chemistry</option>
+                        <option value="bio101">Biology</option>
+                        <option value="math103">Calculus</option>
+                        <option value="bvf014">General Hindi</option>
+                        <option value="bvf011">General English</option>
+                        <option value="ece202s">Seminar</option>
+                        <option value="chem101">Chemistry</option>
                     </select>
                 </div>
                 <div style="margin:20px; !important">
@@ -52,7 +52,7 @@
             {
                 $.ajax({
                     type:"POST",
-                    url:"../ajax/result_excel.php",
+                    url:"../../student/ajax/result_excel.php",
                     data: {option_course:option_course},
                     success: function(data){
                         console.log(data);
@@ -63,12 +63,13 @@
     </script>
     <script type="text/javascript">
         function send(){
+            update();
             var excel_form=document.getElementById('excel_form');
             var data=new FormData(excel_form); 
             $.ajax(
                 {
                 type:"POST",
-                url:"../ajax/result_excel.php",
+                url:"../../student/ajax/result_excel.php",
                 contentType:false,
                 processData:false,
                 data:data,
