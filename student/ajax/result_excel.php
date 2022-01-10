@@ -14,7 +14,7 @@
         if($extension == "xls" || $extension =="xlsx" || $extension == "csv")
         {
             echo "file type accepted";
-            $uploadFilePath = '../../student/uploads/'.basename($_FILES["excel_file"]["name"]);
+            $uploadFilePath = '../../uploads/'.basename($_FILES["excel_file"]["name"]);
             move_uploaded_file($_FILES["excel_file"]["tmp_name"], $uploadFilePath);
             $filename= $_FILES["excel_file"]["name"];
             echo $filename;

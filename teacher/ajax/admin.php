@@ -19,12 +19,12 @@
                 <div style="margin:20px; !important">
                     <select id="courses" name="course" onChange="update();">
                         <option value="0">select</option>
-                        <option value="bio">Biology</option>
-                        <option value="math103">Math</option>
-                        <option value="general_Hindi">General Hindi</option>
-                        <option value="general_English">General English</option>
-                        <option value="seminar">Seminar</option>
-                        <option value="chemistry">Chemistry</option>
+                        <option value="bio101">Biology</option>
+                        <option value="math103">Calculus</option>
+                        <option value="bvf014">General Hindi</option>
+                        <option value="bvf011">General English</option>
+                        <option value="ece202s">Seminar</option>
+                        <option value="chem101">Chemistry</option>
                     </select>
                 </div>
                 <div style="margin:20px; !important">
@@ -63,6 +63,7 @@
     </script>
     <script type="text/javascript">
         function send(){
+            update();
             var excel_form=document.getElementById('excel_form');
             var data=new FormData(excel_form); 
             $.ajax(
