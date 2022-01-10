@@ -2,7 +2,7 @@
 <?php
     include('../Classes/PHPExcel.php');
     include("connection.php");
-    $course=$_POST['course'];
+    $course=$_POST['course']; //  for eg math103
     echo $course;
     if(!empty($_FILES["excel_file"]))
     {

@@ -30,7 +30,13 @@
                     <div class="heading-exp">
                         <span>EXPERIENCE SECTION</span>
                     </div>
+                    <div class="search">
+                            <div><input class="search-box" type="text" placeholder="Search..."></div>
+                            <div class="edit-icon"><i class="bx bx-edit" type="solid"></i></div>
+                        </div>
+                    
                     <div class="main">
+                        
                         <div class="experience-block">
                             <div class="blog-title"><h4>VMware Interview Experience for Intern+MTS (On-Campus)</h4></div>
                             <div class="blog-content">
