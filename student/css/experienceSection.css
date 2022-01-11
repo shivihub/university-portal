@@ -13,20 +13,61 @@
     color: #0e547c;
 
 }
+.search-icon{
+    font-size: 1.5em;
+}
+.srch{
+    padding:0px 16px !important;
+    display: flex;
+    align-items: center;
+    border: 1px solid gray;
+    border-radius: 26px;
+    
+}
 .search{
     display:flex;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 90%;
+    margin-bottom: 20px !important;
 }
 .search-box{
-    padding: 10px 15px!important;
-
+    padding: 5px 0px 5px 10px !important;
+    font-size: 1.2em;
+    border: none;
     
 
 }
+.search-box textarea:focus, input:focus{
+    outline: none;
+}
+.search-box:active{
+    border: none;
+}
 .edit-icon{
     font-size: 2em;
-    color:gray;
+    /* color:gray !important; */
+    cursor: pointer;
+}
+.edit-icon a{
+    color: grey !important;
+}
+
+.edit-icon:hover .edit-hover {
+    opacity: 1;
+    transform: translate(50px, -65px);
+    transition: all 0.8s;
+
+}
+
+.edit-hover {
+    position: absolute;
+    background-color: rgb(9 65 97 / 10%);
+    color: rgb(9 65 97);
+    padding: 5px 15px !important;
+    transform: translate(35px, -55px);
+    border-radius: 5px;
+    font-size: 0.8em;
+    opacity: 0;
 }
 .main{
     /* background-color: rgb(191, 217, 240); */
