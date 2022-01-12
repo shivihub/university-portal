@@ -31,9 +31,15 @@
                         <span>EXPERIENCE SECTION</span>
                     </div>
                     <div class="search">
-                            <div><input class="search-box" type="text" placeholder="Search..."></div>
-                            <div class="edit-icon"><i class="bx bx-edit" type="solid"></i></div>
+                        <div class="srch">
+                            <i class="bx bx-search-alt-2 search-icon"></i>
+                            <input class="search-box" type="text" placeholder="Search...">
                         </div>
+                        <div class="edit-icon">
+                            <a href="./editBlog.php"><i class="bx bx-edit" type="solid"></i></a>
+                            <div class="edit-hover">Add Your's</div>
+                        </div>
+                    </div>
                     
                     <div class="main">
                         
