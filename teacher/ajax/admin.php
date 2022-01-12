@@ -20,7 +20,7 @@
                 <div style="margin:20px; !important">
                     <form id="excel_form">
                         <div style="margin:20px; !important" id="getCourseCode"> 
-                            <select id="courses" name="course" >
+                            <select id="courses" name="course" onClick='getcourses()'>
                                 <option value="0">select</option>
                                 <option value="bio101">Biology</option>
                                 <option value="math103">Calculus</option>
@@ -47,24 +47,29 @@
     </div>
 
     
-    <!-- <script type="text/javascript">
-        function update() {
+    <script type="text/javascript">
+        function getcourses() {
             
             var select_course = document.getElementById('courses');
             var option_course = select_course.options[select_course.selectedIndex].value;
+           
             if(option_course!=0)
             {
                 $.ajax({
+                    
                     type:"POST",
-                    url:"../../student/ajax/result_excel.php",
-                    data: {option_course:option_course},
+                    url:"./getstudent.php",
+                    data: {select_course:select_course},
+                    
                     success: function(data){
-                        alert(data);
+                        console.log(data);
+                      
                     }
                 });
             }   
         }
-    </script> -->
+        getcourses();
+    </script>
     <script type="text/javascript">
         function send(){
             var excel_form=document.getElementById('excel_form');
@@ -84,7 +89,7 @@
             });
 
         }
-    
+      
 
         </script>
     <script type="text/javascript">

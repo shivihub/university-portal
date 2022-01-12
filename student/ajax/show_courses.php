@@ -3,9 +3,10 @@
     $option=$_POST['option'];
     $id=$_POST['id'];
     
-    $query = $db->prepare('SELECT * FROM courses_of_ece WHERE semester=? ');
-    $data=array($option);
+    $query = $db->prepare('SELECT * from courses_of_ece,result where courses_of_ece.course_code=result.course_code AND result.sid=? AND courses_of_ece.semester =?');
+    $data=array($id,$option);
     $query->execute($data);
+    if($datarow=$query->fetch()>0){
     
 ?>
 
@@ -20,13 +21,14 @@
                 <th>Remarks</th>
             </tr>
     <?php
+   
     while($datarow=$query->fetch()){
     ?> 
         
     <tr>
         <td style="text-align:left;"><?php echo $datarow['course_name'] ?></td>
         <td><?php echo $datarow['credit_points'] ?></td>
-        <td>A</td>
+        <td><?php echo $datarow['marks'] ?></td>
         <td>GOOD</td>
     </tr>
                             
@@ -51,5 +53,14 @@
         </tr>
     </table>
 </div>  
+
+<?php } 
+
+else
+?>
+<div class="table"><h3><span  style="color:red;">**</span>Result not announced</h3></div>
+
+
+
 
 
