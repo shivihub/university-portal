@@ -20,15 +20,7 @@
                 <div style="margin:20px; !important">
                     <form id="excel_form">
                         <div style="margin:20px; !important" id="getCourseCode"> 
-                            <select id="courses" name="course" onClick='getcourses()'>
-                                <option value="0">select</option>
-                                <option value="bio101">Biology</option>
-                                <option value="math103">Calculus</option>
-                                <option value="bvf014">General Hindi</option>
-                                <option value="bvf011">General English</option>
-                                <option value="ece202s">Seminar</option>
-                                <option value="chem101">Chemistry</option>
-                            </select>
+                            
                         </div>
                         <div>
                         <input type="file" name="excel_file" id="excel_file">
@@ -62,15 +54,15 @@
                     data: {},
                     
                     success: function(data){
-                        console.log(data);
-                      
+                        $('#getCourseCode').html(data);
+                            
                     }
                 });
                
         }
         getcourses();
     </script>
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         function send(){
             var excel_form=document.getElementById('excel_form');
             var data=new FormData(excel_form); 
@@ -91,7 +83,7 @@
         }
       
 
-        </script>
+        </script> -->
     <script type="text/javascript">
         $('form').submit(function(e) {
         e.preventDefault();
