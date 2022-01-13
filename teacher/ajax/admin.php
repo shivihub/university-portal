@@ -53,20 +53,20 @@
             var select_course = document.getElementById('courses');
             var option_course = select_course.options[select_course.selectedIndex].value;
            
-            if(option_course!=0)
-            {
+            
+            
                 $.ajax({
                     
                     type:"POST",
                     url:"./getstudent.php",
-                    data: {select_course:select_course},
+                    data: {},
                     
                     success: function(data){
                         console.log(data);
                       
                     }
                 });
-            }   
+               
         }
         getcourses();
     </script>
