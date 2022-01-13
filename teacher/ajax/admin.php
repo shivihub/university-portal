@@ -59,8 +59,7 @@
                     
                     type:"POST",
                     url:"./getstudent.php",
-                    data: {select_course:select_course},
-                    
+                    data: {},
                     success: function(data){
                         console.log(data);
                       

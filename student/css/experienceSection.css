@@ -54,7 +54,7 @@
 
 .edit-icon:hover .edit-hover {
     opacity: 1;
-    transform: translate(50px, -65px);
+    transform: translate(35px, -55px);
     transition: all 0.8s;
 
 }
@@ -64,9 +64,9 @@
     background-color: rgb(9 65 97 / 10%);
     color: rgb(9 65 97);
     padding: 5px 15px !important;
-    transform: translate(35px, -55px);
+    transform: translate(25px, -45px);
     border-radius: 5px;
-    font-size: 0.8em;
+    font-size: 12px;
     opacity: 0;
 }
 .main{
@@ -97,7 +97,7 @@
     text-align:left ;
     color: gray;
     min-height: 60px;
-    /* padding: 20px 15px !important; */
+    padding: 20px 15px !important;
 }
 .blog-content a{
     color:rgb(33, 103, 160);

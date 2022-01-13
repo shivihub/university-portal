@@ -33,7 +33,14 @@
                     <div class="search">
                         <div class="srch">
                             <i class="bx bx-search-alt-2 search-icon"></i>
-                            <input class="search-box" type="text" placeholder="Search...">
+                            <input class="search-box" id="" name="" list="subjects" placeholder="Search...">
+                                <datalist id='subjects'>
+                                    <option value="Amazon">
+                                    <option value="Goldman Sachs">
+                                    <option value="Flikart">
+                                    <option value="Google">
+                                </datalist>
+</input>
                         </div>
                         <div class="edit-icon">
                             <a href="./editBlog.php"><i class="bx bx-edit" type="solid"></i></a>
