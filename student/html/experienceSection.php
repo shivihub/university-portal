@@ -51,9 +51,18 @@
                     
                     <div class="main" id="main">
                         
+                        <!-- <div class="experience-block">
+                            <div class="blog-title"><h4>VMware Interview Experience for Intern+MTS (On-Campus)</h4></div>
+                            <div class="blog-content" >
+                                <span id="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt voluptate voluptatum qui corporis, commodi fugit totam unde nihil explicabo, voluptates, ratione fugiat incidunt quis aperiam porro. Ad nobis perspiciatis recusandae beatae incidunt expedita sed ducimus officiis. Odio corporis sed, recusandae esse sint magni...</span>
+                                <span><a href="#">Read more</a></span>
+                            </div>
+                            
+                        </div>
+
                         <div class="experience-block">
                             <div class="blog-title"><h4>VMware Interview Experience for Intern+MTS (On-Campus)</h4></div>
-                            <div class="blog-content" id="content">
+                            <div class="blog-content" >
                                 <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt voluptate voluptatum qui corporis, commodi fugit totam unde nihil explicabo, voluptates, ratione fugiat incidunt quis aperiam porro. Ad nobis perspiciatis recusandae beatae incidunt expedita sed ducimus officiis. Odio corporis sed, recusandae esse sint magni...</span>
                                 <span><a href="#">Read more</a></span>
                             </div>
@@ -62,7 +71,7 @@
 
                         <div class="experience-block">
                             <div class="blog-title"><h4>VMware Interview Experience for Intern+MTS (On-Campus)</h4></div>
-                            <div class="blog-content" id="content">
+                            <div class="blog-content" >
                                 <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt voluptate voluptatum qui corporis, commodi fugit totam unde nihil explicabo, voluptates, ratione fugiat incidunt quis aperiam porro. Ad nobis perspiciatis recusandae beatae incidunt expedita sed ducimus officiis. Odio corporis sed, recusandae esse sint magni...</span>
                                 <span><a href="#">Read more</a></span>
                             </div>
@@ -71,21 +80,12 @@
 
                         <div class="experience-block">
                             <div class="blog-title"><h4>VMware Interview Experience for Intern+MTS (On-Campus)</h4></div>
-                            <div class="blog-content" id="content">
+                            <div class="blog-content">
                                 <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt voluptate voluptatum qui corporis, commodi fugit totam unde nihil explicabo, voluptates, ratione fugiat incidunt quis aperiam porro. Ad nobis perspiciatis recusandae beatae incidunt expedita sed ducimus officiis. Odio corporis sed, recusandae esse sint magni...</span>
                                 <span><a href="#">Read more</a></span>
                             </div>
                             
-                        </div>
-
-                        <div class="experience-block">
-                            <div class="blog-title"><h4>VMware Interview Experience for Intern+MTS (On-Campus)</h4></div>
-                            <div class="blog-content" id="content">
-                                <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt voluptate voluptatum qui corporis, commodi fugit totam unde nihil explicabo, voluptates, ratione fugiat incidunt quis aperiam porro. Ad nobis perspiciatis recusandae beatae incidunt expedita sed ducimus officiis. Odio corporis sed, recusandae esse sint magni...</span>
-                                <span><a href="#">Read more</a></span>
-                            </div>
-                            
-                        </div> 
+                        </div>  -->
                     
                     </div>
 
@@ -97,8 +97,8 @@
     </div>
     
    
-    <!-- <script type="text/javascript">
-//    getExperiences();
+    <script type="text/javascript">
+   getExperiences();
    function getExperiences()
    {
        
@@ -113,15 +113,6 @@
            });
         
    }
-    
-    
-
-   </script> -->
-   <script type="text/javascript">
-        var content = document.getElementById('content').innerTEXT;
-        let result = content.substring(1, 20);
-        // content = content+"...";
-        console.log(result);
    </script>
     
 </body>

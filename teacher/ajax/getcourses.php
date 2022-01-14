@@ -5,18 +5,18 @@ $query=$db->prepare ('SELECT * FROM courses_of_ece ');
 $data=array();
 $query->execute($data);
 ?>
-<div>
  <select id="courses" name="course" onClick='getcourses()'>
     <option value="0">select</option>                        
    
 <?php while($datarow=$query->fetch()){
+    $code= $datarow['course_code'];
+    $name= $datarow ['course_name'];
     ?>
     
-    <option value="<?php echo $datarow ['course_code'] ?>"><?php echo $datarow ['course_name'] ?></option>
+    <option value="<?php echo $code ?>"><?php echo $name  ?></option>
 <?php}
 
  
 
 ?>
 </select>
-</div>
