@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../css/experienceSection.css">
     <link rel="stylesheet" href="../../bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="../../bootstrap/normalize.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <link rel="shortcut icon" href="https://tse2.mm.bing.net/th?id=OIP.TRLdZgnfAkaU15U8ICMdZAHaGG&pid=Api&P=0&w=194&h=161" type="image/x-icon">
     
@@ -87,7 +88,27 @@
             </div>
         </div>
     </div>
-</body>
+    
+   
 
+    
+</body>
+<script type="text/javascript">
+   
+   function getExperiences()
+   {
+       
+           $.ajax({
+               type:"POST",
+               url:"../ajax/getExperiences.php",
+               data: {},
+               success: function(data){
+                   console.log(data);
+               }
+           });
+        
+   }
+    getExperiences();
+   </script>
 
 </html>

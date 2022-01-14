@@ -17,7 +17,7 @@
             <div class="contain">
                 <div style="margin:10px !important; font-weight:700; font-size:2em; ">Select Subject</div>
                 
-                <div style="margin:20px; !important">
+                <div style="margin:20px; !important"></div>
                     <form id="excel_form">
                         <div style="margin:20px; !important" id="getCourseCode"> 
                             
@@ -39,30 +39,8 @@
     </div>
 
     
+   
     <script type="text/javascript">
-        function getcourses() {
-            
-            var select_course = document.getElementById('courses');
-            var option_course = select_course.options[select_course.selectedIndex].value;
-           
-            
-            
-                $.ajax({
-                    
-                    type:"POST",
-                    url:"./getstudent.php",
-                    data: {},
-                    
-                    success: function(data){
-                        $('#getCourseCode').html(data);
-                            
-                    }
-                });
-               
-        }
-        getcourses();
-    </script>
-    <!-- <script type="text/javascript">
         function send(){
             var excel_form=document.getElementById('excel_form');
             var data=new FormData(excel_form); 
@@ -83,7 +61,7 @@
         }
       
 
-        </script> -->
+        </script>
     <script type="text/javascript">
         $('form').submit(function(e) {
         e.preventDefault();
