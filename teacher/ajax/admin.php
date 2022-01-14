@@ -17,18 +17,10 @@
             <div class="contain">
                 <div style="margin:10px !important; font-weight:700; font-size:2em; ">Select Subject</div>
                 
-                <div style="margin:20px; !important">
+                <div style="margin:20px; !important"></div>
                     <form id="excel_form">
                         <div style="margin:20px; !important" id="getCourseCode"> 
-                            <select id="courses" name="course" onClick='getcourses()'>
-                                <option value="0">select</option>
-                                <option value="bio101">Biology</option>
-                                <option value="math103">Calculus</option>
-                                <option value="bvf014">General Hindi</option>
-                                <option value="bvf011">General English</option>
-                                <option value="ece202s">Seminar</option>
-                                <option value="chem101">Chemistry</option>
-                            </select>
+                            
                         </div>
                         <div>
                         <input type="file" name="excel_file" id="excel_file">
@@ -47,28 +39,7 @@
     </div>
 
     
-    <script type="text/javascript">
-        function getcourses() {
-            
-            var select_course = document.getElementById('courses');
-            var option_course = select_course.options[select_course.selectedIndex].value;
-           
-            if(option_course!=0)
-            {
-                $.ajax({
-                    
-                    type:"POST",
-                    url:"./getstudent.php",
-                    data: {},
-                    success: function(data){
-                        console.log(data);
-                      
-                    }
-                });
-            }   
-        }
-        getcourses();
-    </script>
+   
     <script type="text/javascript">
         function send(){
             var excel_form=document.getElementById('excel_form');
