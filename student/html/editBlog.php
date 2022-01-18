@@ -17,17 +17,31 @@
     <title>Banasthali Portal</title>
 </head>
 <body>
+    <div class="header">
+
+    </div>
     <div class="container">
+        
         <div class="form">
             <form>
                 <label>Title:</label>
                 <input type="text" id="title" name="title" placeholder="Enter the Title" class="form-control" required>
-                <label >Content</label>
-                <input type="text" id="content" name="content" placeholder="Start Writing" class="form-control" required>        
-            </form>
+                <label >Content:</label>
+                <textarea name="text" id="editor" cols="53" rows="20" class="form-control"></textarea>
+            </form >
         </div>
     </div>
+    
 </body>
+<script src="https://cdn.ckeditor.com/ckeditor5/31.1.0/classic/ckeditor.js"></script>
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#editor' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+</script>
+
 
 
 </html>

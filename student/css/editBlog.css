@@ -1,6 +1,19 @@
+
+.header{
+    height: 250px ;
+    width: 100%;
+    background-color: gray;
+    margin-bottom: 20px !important;
+}
 .container{
-    background-color: blue;
+    /* background-color: blue; */
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 50px!important;
+    
+}
+
+.container>.form{
+    width: 80% ;
 }
