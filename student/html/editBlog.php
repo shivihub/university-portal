@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/home.css">
+    <!-- <link rel="stylesheet" href="../css/home.css"> -->
     <link rel="stylesheet" href="../css/editBlog.css">
     <link rel="stylesheet" href="../../bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="../../bootstrap/normalize.min.css">
@@ -17,20 +17,14 @@
     <title>Banasthali Portal</title>
 </head>
 <body>
-    
-    <?php include("./navbar.php")?>
-    
-    <div class="col-sm-12">
-        <div class="contain">
-            <div class="col-sm-1">
-                <?php include("./sidebar.php")?>
-            </div>
-            <div class="col-sm-11" >
-                <div class="contain">
-                    
-                </div>
-                
-            </div>
+    <div class="container">
+        <div class="form">
+            <form>
+                <label>Title:</label>
+                <input type="text" id="title" name="title" placeholder="Enter the Title" class="form-control" required>
+                <label >Content</label>
+                <input type="text" id="content" name="content" placeholder="Start Writing" class="form-control" required>        
+            </form>
         </div>
     </div>
 </body>
