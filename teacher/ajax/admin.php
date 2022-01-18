@@ -20,26 +20,7 @@
                 <div style="margin:20px; !important"></div>
                     <form id="excel_form">
                         <div style="margin:20px; !important" id="getCourseCode"> 
-                            <select id="courses" name="course" onClick='getcourses()'>
-                                <option value="0">select</option>                        
-                                
-                                <?php
-                                include ('../../student/ajax/connection.php');
-                                
-                                $query=$db->prepare ('SELECT * FROM courses_of_ece ');
-                                $data=array();
-                                $query->execute($data);
-                                ?>
-                                
-                                <?php while($datarow=$query->fetch()){
-                                    $code= $datarow['course_code'];
-                                    $name= $datarow ['course_name'];
-                                ?>
-                                <option value="<?php echo $code; ?>"> <?php echo $name;  ?> </option>
-                                <?php}
-                                ?>
-                            </select>
-
+                            
                         </div>
                         <div>
                         <input type="file" name="excel_file" id="excel_file">
@@ -58,7 +39,29 @@
     </div>
 
     
-   
+    <script type="text/javascript">
+        getCourse();
+        function getCourse(){
+        
+            
+            $.ajax(
+                {
+                type:"POST",
+                url:"./getcourses.php",
+                contentType:false,
+                processData:false,
+                data:{},
+                success:function(data)
+                {
+                    $('#getCourseCode').html(data);
+                }
+            });
+
+        }
+      
+
+        </script>
+    
     <script type="text/javascript">
         function send(){
             var excel_form=document.getElementById('excel_form');
@@ -73,7 +76,9 @@
                 data:data,
                 success:function(data)
                 {
-                    console.log(data);
+                    alert(data);
+                    // console.log(data);
+                    window.location.reload(1);
                 }
             });
 

@@ -60,7 +60,7 @@
 
     else{
 ?>
-    <div class="table"><h3><span  style="color:red;">**</span>Result not announced</h3></div>
+    <div class="table"><h3><span  style="color:red;">**</span>Result Not Found</h3></div>
 <?php } 
 
 

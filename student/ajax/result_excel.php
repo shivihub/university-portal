@@ -3,7 +3,7 @@
     include('../Classes/PHPExcel.php');
     include("connection.php");
     $course=$_POST['course']; //  for eg math103
-    echo $course;
+    // echo $course;
     if(!empty($_FILES["excel_file"]))
     {
        
@@ -13,11 +13,11 @@
         $extension=$file_array[1];
         if($extension == "xls" || $extension =="xlsx" || $extension == "csv")
         {
-            echo "file type accepted";
+            echo "file type accepted"." " ;
             $uploadFilePath = '../../uploads/'.basename($_FILES["excel_file"]["name"]);
             move_uploaded_file($_FILES["excel_file"]["tmp_name"], $uploadFilePath);
             $filename= $_FILES["excel_file"]["name"];
-            echo $filename;
+            echo $filename." ";
             $object= PHPExcel_IOFactory::load($uploadFilePath);
              foreach($object->getWorksheetIterator() as $worksheet){
                  $rowcount = $worksheet->getHighestRow();
