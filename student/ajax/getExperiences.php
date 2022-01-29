@@ -14,7 +14,7 @@
             <div class="blog-title"><h4><?php echo $datarow['title'];?></h4></div>
             <div class="blog-content">
                 <span id="content"><?php echo substr($datarow['content'],0,250).('...');?></span>
-                <span><a href="#">Read more</a></span>
+                <span><a href="../html/viewBlog.php?bid=<?php echo $datarow['bid']?>">Read more</a></span>
             </div>
             
         </div>

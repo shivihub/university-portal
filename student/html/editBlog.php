@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/editBlog.css">
     <!-- <link rel="stylesheet" href="../../bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="../../bootstrap/normalize.min.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <link rel="shortcut icon" href="https://tse2.mm.bing.net/th?id=OIP.TRLdZgnfAkaU15U8ICMdZAHaGG&pid=Api&P=0&w=194&h=161" type="image/x-icon">
     
@@ -24,14 +25,17 @@
         </div>
         <div class="containers">
             <div class="form">
-                <form>
+                <form id="form">
+                    <label>Author:</label>
+                    <input type="text" id="author" name="author" placeholder="Enter your name" class="form-control " required>
                     <label>Title:</label>
                     <input type="text" id="title" name="title" placeholder="Enter the Title" class="form-control " required>
                     <label >Content:</label>
-                    <textarea name="text" id="editor" cols="53" rows="20" ></textarea>
-                    <!-- <div class="submit-btn">                
-                        <input type="submit" id="submit" name="submit" class=" submit" required>
-                    </div>                 -->
+                    <textarea name="content" id="content" ></textarea>
+                    
+                    <div class="submit-btn">                
+                        <input type="submit" id="submit" name="submit" class=" submit" required onclick="input()">
+                    </div>                
                 </form>
             </div>
         </div>
@@ -57,7 +61,37 @@
         //     })
         //     }; -->
         
-</script>
+<!-- </script> -->
+<script type="text/javascript">
+        function input(){
+            var form=document.getElementById('form');
+            var data=new FormData(form); //object
+            
+            
+            $.ajax(
+                {
+                type:"POST",
+                url:"../ajax/insertBlog.php",
+                contentType:false,
+                processData:false,
+                data:data,
+                success:function(data)
+                {
+                    alert(data);
+                    // console.log(data);
+                    
+                }
+            });
+
+        }
+      
+
+        </script>
+        <script type="text/javascript">
+        $('form').submit(function(e) {
+        e.preventDefault();
+    }); 
+    </script>
 
 
 
