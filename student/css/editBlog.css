@@ -1,6 +1,10 @@
-.container{
-    background-color: blue;
+.form{
     display: flex;
     justify-content: center;
+    font-size: 1.5em;
     align-items: center;
+    margin-top: 150px;
+}
+.title, .content{
+    padding: 4px 20px;
 }
