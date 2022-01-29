@@ -1,20 +1,3 @@
-/*
- * Configure the z-index of the editor UI, so when inside a Bootstrap
- * modal, it will be rendered over the modal.
- */
- :root {
-    --ck-z-default: 100;
-    --ck-z-modal: calc( var(--ck-z-default) + 999 );
-}
-
-/*
- * Override the width of the table set by Bootstrap content styles.
- * See: https://github.com/ckeditor/ckeditor5-table/issues/154.
- */
- .ck-content .table {
-    width: auto;
-}
-
 
 body{
     background-color:#e0e0e0 !important ;
@@ -24,12 +7,19 @@ body{
 .header{
     width: 100%;
     margin-bottom: 20px !important;
+
+}
+.header svg{
+    z-index: -1;
+    position: fixed;
+    top:0;
 }
 .containers{
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0 20%  !important;
+    margin-top:50vh !important;
     margin-bottom: 50px!important;
     
 }
