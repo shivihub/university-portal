@@ -3,6 +3,7 @@
         <li style="margin-top:30px !important;">
             <a href="#">
                 <i class='bx bx-home' type="solid"></i>
+                
                 <!-- <span>Home</span>   -->
             </a>
         </li>

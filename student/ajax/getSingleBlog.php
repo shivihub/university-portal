@@ -7,12 +7,20 @@
     $data=array($bid);   
     $query->execute($data);
 
-   $datarow=$query->fetch();
-   echo 1;
+   while($datarow=$query->fetch()){ ?>
 
-?>
-<div>
-    <p><?php echo $datarow['title']?></p>
-    <p></p>
+    <div >
+      <div class="blog-heading" ><h1><?php echo $datarow['title']?></h1></div>
+      <div>
+        <div class="like-btn">
+          <i class='bx bx-heart'></i>
+        </div>
+        <div class="tooltip">Like</div>
+        </div>
+    </div>
+    <div class="blog-content" ><p><?php echo $datarow['content']?></p></div>
 
-</div>
+<?php
+   } ?>
+
+
